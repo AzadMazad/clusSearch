@@ -4,7 +4,7 @@ ClusSearch is a pipeline that implements a workflow described in the paper "Stab
 For given regions, it groups genetically similar individuals into clusters, which are categorized into majority and potential outlier clusters. These clusters are then split into periodic subclusters.  
 The resulting subclusters are compared inside and across regions to confirm outlier status and to find potential sources for outlier clusters.
 
-The central tool of this workflow is **Admixtools2 qpadm**, which is applied as one-component models. Given a target `T`, a left component `L`, and a group of reference populations `R`, such a model tests against the null hypothesis that `T` and `L` form a clade in respect to `R`. A resulting p-value above the significance threshold therefore means that `L` and `T` do form a clade.
+The central tool of this workflow is **Admixtools2 qpadm**, which is applied as one-component models. Given a target `T`, a left component `L`, and a group of reference populations `R`, such a model tests against the null hypothesis that `T` and `L` form a clade in respect to `R`. A resulting p-value above the significance threshold therefore means that `L` and `T` do form a clade. This concept is used for initial clustering of eacch regions individuals, as well as for outlier status confirmation, source detection and model competition. See detailed description of the pipeline steps below for more detaiis.
 
 ---
 
