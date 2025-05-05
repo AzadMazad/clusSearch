@@ -153,7 +153,7 @@ The Bash scripts start with a number corresponding to execution order. The R scr
 the parameters name in single quotes, e.g. 'output_folder'.
 
 
-### STEP 1: Initial .ind file manipulation
+#### STEP 1: Initial .ind file manipulation
 **Script**: 1_initial_indfile_manipulation.sh
 
 
@@ -163,13 +163,13 @@ Also, if a 'custom_rightgroups' file is provided, the individuals from the first
 The .ind file that was passed to the pipeline is moved to .original_ind, with the modified .ind file takings its place so it gets recognized as part of the fileset downstream. If a .original_ind already exists for the used fileset, the move of .ind to .original_ind is omitted to avoid overwriting during repeated pipeline executions.
 
 
-### STEP 2:
+#### STEP 2:
 **Scripts**: 2_f2_extraction_indivduals.sh, f2_extraction_regional_individuals_2.R
 
 For each region, this script computes f2 stats between all its individuals and then reads them into one cummulative .rds file. The individual f2 stats will be saved under
 'f2_directory'/regional_pairwise/regionName, the .rds file under 'f2_directory'/f2_blocks/regional_pairwise/regionName.rds. This step is omitted when 'precompute_f2' is set to F.
 
-### STEP 3:
+#### STEP 3:
 **Scripts**: 3_pairwise_pvalues_onF2data.sh, qpadm_oneComp_parallelized_onF2data_3_11_13.R
 
 This script runs a one-component model of qpadm for every unique pair of individuals in each region in parallelized manner, using precomputed f2 stats as data input. The number of cores specified in
@@ -181,13 +181,13 @@ and the resulting p-value of the model in the third.
 If 'precomptue_f2' is set to F, the one-component qpadm models are run with the fileset itself as input data. Qpadm will be run with default arguments when this option is chosen. As above,
 the results will be saved to a file for each region in 'output_folder'/metadata.
 
-### STEP 4:
+#### STEP 4:
 **Scripts**: 4_transform_p_to_d.sh, transform_pvalues_to_dvalues_4.R
 
 The tab separated p-value table of the former step is transformed into a tab separated dissimilarity matrix. A p-value is transformed into a dissimilarity value by calculating d = -log10(p-value),
 turning low p-values - which favor rejection of the null-hypothesis that L and T form a clade - into high dissimilarity scores. The resulting d-matrix is saved to 'output_folder'/metadata/regionName_dmatrix.
 
-### STEP 5:
+#### STEP 5:
 **Script**: 5_cluster_upon_dMatrix.sh
 
 The UPGMA algorithm implemented in pythons scipy.cluster.hierarchy (v 1.6.1) is used to perform hierarchical clustering on each regional d-matrix. The hierarchical clusters are then split along a
@@ -196,7 +196,7 @@ The resulting flat clusters of each region are saved to a tab separated text fil
 number in the second column. Now the initial dataframe is created for each region under 'output_folder'/regionName_df which has "ID" and "Cluster" as header, where cluster assignment is annotated as
 regionName_clusterNumber to allow differentiation of clusters between regions.
 
-### STEP 6:
+#### STEP 6:
 **Script**: 6_annotate_clusterType.sh
 
 For each region, cluster type is annotated as majority or potential_outlier, by determining the absolute size of the cluster and the percentage of the regions individuals the cluster contains and comparing
