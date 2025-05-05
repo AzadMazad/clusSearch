@@ -203,7 +203,7 @@ For each region, cluster type is annotated as majority or potential_outlier, by 
 those sizes against 'outlier_threshold_absolute' and 'outlier_threshold_relative'. If a cluster contains no more samples then the former value or less percentage of the regions IDs than the latter, it
 is considered a potential outlier cluster. The columns "Frac. Cluster/Region" and "Cluster type" are added to each regions dataframe.
 
-### STEP 7
+#### STEP 7
 **Script**: 7_split_upon_custom_periods.sh
 
 The clusters of each region are split into periodic subclusters. To do so, each samples date in years BP is found from 'dates_file' and compared to the periods boundaries specified in
@@ -212,25 +212,25 @@ If the date of a sample is not found in the provided 'dates_file', is not of Int
 the subcluster name will be regionName_NA_clusterNumber. If no 'dates_file' is provided, "Date in years BP" will be set NA and the subcluster name will be set as regionName_NA_clusterNumberAdditionaly,
 effectively resulting in no subclassification.
 
-### STEP 8:
+#### STEP 8:
 **Script**: 8_calculate_subclusters_fractions.sh
 
 The fraction of a periodic subcluster to the region as well as to the aperiodic main cluster is determined and the columns "Frac. subcluster/region" and "Frac. sucluster/cluster" are added to the data frame.
 
-### STEP 9:
+#### STEP 9:
 **Scripts**: 9_update_indfile_to_periodicgroups.sh, manipulate_ind_1_9.R
 
 To allow the comparison of found subclusters in qpadm models, a new .ind file is created that assigns each clustered individuals subcluster as its population ID. The current .ind with individual
 population names is moved to 'output_folder'/metadata/FilesetPrefix.individuals_ind, with the new .ind file taking its place so it gets recognized as part of the fileset downstream. This new and final .ind
 file, which annotates found suclusters as population labels, also gets copied to 'output_folder'/metadata/FilesetPrefix.clusters_ind.
 
-### STEP 10:
+#### STEP 10:
 **Script**: 10_f2_extraction_periodic_groups.sh
 
 F2 stats are computed between all subclusters of all regions and read into a cumulative .rds file. The subclusters f2 stats are saved to 'f2_directory'/crossregional_groupwise/subclusterName and the .rds file
 to 'f2_directory'/f2blocks/crossregional_groupwise/all_regions.rds. If 'precompute_f2' is set to F, this step is omitted.
 
-### STEP 11:
+#### STEP 11:
 **Scripts**: 11_compute_outlierValidation_pvalues_onF2data.sh, qpadm_oneComp_parallelized_onF2data_3_11_13.R
 
 For every region, every one-component qpadm model consisting of a potential outlier and an in-region majority subcluster is run using the precomputed f2 data as input. The resulting pvalues are saved to a tab separated
@@ -242,7 +242,7 @@ If 'precompute_f2' is set to F, the p-values for potential outlier - in-region m
 chosen. As above, the results will be saved to a file for each region in 'output_folder'/metadata.
 
 
-### STEP 12:
+#### STEP 12:
 **Script**: 12_validate_outliers_from_pvals.sh
 
 To test whether potential outlier subcluster are truly distinct from regional majority ancestries, it is checked if they have any one-component qpadm model with an in-region majority cluster that had a
@@ -251,7 +251,7 @@ denoting "majority", "outlier" or "connected to majority" for the respective cas
 that was found in a region between a potential outlier and a in-region majority.
 
 
-### STEP 13:
+#### STEP 13:
 **Scripts**: 13_compute_ancestrySearch_pvalues_onF2data.sh, qpadm_oneComp_parallelized_onF2data_3_11_13.R
 
 For every outlier subcluster, one-component qpadm models between the outlier and every majority subcluster from a different region are calculated using the precomputed f2 data as input. The resulting p-values
@@ -263,14 +263,14 @@ If precompute f2 is set to F, the p-values for outlier - cross-region majority m
 chosen. As above, the results will be saved to a file for each region in 'output_folder'/metadata.
 
 
-### STEP 14:
+#### STEP 14:
 **Script**: 14_find_potAncs_from_pvals.sh
 
 If a one-conponent model of a outlier subcluster and a trans-region majority had a p-value above 'pvalue_threshold_ancestry', the majority is considered to be cladal to the outlier and is therefore considered
 a potential source to the outlier. For each region, a tab separated file is created under 'output_folder'/metadata/regionName_potential_outlierSources, where each such instance is saved with the outlier in
 the first and the potential source in the second column. If a has no potential sources found, its written into 'output_folder'/metadata/regions_wo_ancestries, to allow a user to quickly discern such cases.
 
-### STEP 15:
+#### STEP 15:
 **Scripts**: 15_compute_modelComp_pvals.sh, qpadm_modelComp_parallelized_onF2data_15.R
 
 In this step, p-values for model-competition are computed. Model-competition is a process in which several potential sources that were found for one outlier are compteted against each other. Consider an
@@ -285,7 +285,7 @@ outlier, the second column the source used as left component, the third column t
 If 'precompute_f2' is set to F, the p-values for model competition are computed using the eigenstrat-fileset as input data for qpadm. Qpadm will be run with default arguments when this option is
 chosen. As above, the results will be saved to a file for each region in 'output_folder'/metadata.
 
-### STEP 16:
+#### STEP 16:
 **Script**: 16_find_suboptimalAncs_from_pvals.sh
 
 Model-competition is achieved by checking for every source x of an outlier if it has a model_competition model where the model is rejected, in which case source x is written to a temporary list of suboptimal
@@ -295,7 +295,7 @@ cannot be explained by x, resulting in both being suboptimal to each other. In s
 to avoid information loss, and the problematic outlier written to 'output_folder'/metadata/problematic_modelComp. The remaining sources of every outlier are written to
 'output_folder'/metadata/regionName_potential_outlierSources_modelComped, a tab separated text file which i every line denotes an outlier and one of its sources post model-competition.
 
-### STEP 17:
+#### STEP 17:
 **Script**: 17_keep_contemp_or_older_sources.sh
 
 In this final step, for every outlier only the sources that are from the same or an older period are kept. If an outlier only has sources from younger periods, they are kept as well to avoid information loss.
