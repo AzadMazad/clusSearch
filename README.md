@@ -1,6 +1,6 @@
 # ClusSearch
 
-ClusSearch is a pipeline that implements a workflow described by Antonio et al. (2024).  
+ClusSearch is a pipeline that implements a workflow described in the paper "Stable population structure in Europe during the Iron Age, despite high mobility" by Antonio et al. (2024).  
 For given regions, it groups genetically similar individuals into clusters, which are categorized into majority and potential outlier clusters. These clusters are then split into periodic subclusters.  
 The resulting subclusters are compared inside and across regions to confirm outlier status and to find potential sources for outlier clusters.
 
