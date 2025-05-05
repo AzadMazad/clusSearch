@@ -47,7 +47,7 @@ To run ClusSearch, execute the `exec.sh` script inside the ClusSearch directory 
 
 ## Parameters
 
-The parameter file is a plain text file specifying mandatory and optional parameters, which can be provided in any order.  
+The parameter file is a plain text file specifying mandatory and optional parameters, which can be provided in any order. A parameters name **must be seperated from its value with a colon ':'**. 
 It is formatted as follows:
 ```
 eigenstrat_fileset: path/to/fileset_prefix
