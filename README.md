@@ -148,16 +148,158 @@ Argument of f2_from_precomp. Set to T to return negative allele frequency produc
 
 ## Steps
 
-The pipeline consists of 17 sequential steps implemented as Bash scripts, with additional R scripts called for specific functions.  
-The steps are detailed below, including the script names and their operations. Each script is located in the `clusSearch/.scripts/` directory.
+ClusSearch consists of 17 Bash scripts that are executed sequentially, as well as additional R scripts which are called to run Admixtools2 functions or to allow effective data-frame manipulation.
+The Bash scripts start with a number corresponding to execution order. The R scripts end with numbers corresponding to the steps by which they are called. All scripts as well as some default parameters are stored in clusSearch/.scripts. Below, every step is detailed, stating the exact name of the shell script and any subscripts called and describing the step's process. Parameter set items are specified by
+the parameters name in single quotes, e.g. 'output_folder'.
 
-### Step 1: Initial Individual File Manipulation
-**Script**: `1_initial_indfile_manipulation.sh`  
-This step adjusts the `.ind` file population IDs to allow individual-based models. If custom right groups are provided, labels are updated accordingly.
 
-...
+### STEP 1: Initial .ind file manipulation
+**Script**: 1_initial_indfile_manipulation.sh
 
-(*Note: I’ll avoid repeating the full step descriptions here unless otherwise requested, as they are unchanged from your original README.*)
+
+This script creates a new .ind file, where all individuals from the regional ID lists in the 'ids_directory' have their population ID overwritten by their individual ID. This is done because qpadm expect its `L` and `T` arguments to be population IDs, so unique population IDs are needed for all indivudals that are to be clustered to allow setting them as `L` and `T`.
+
+Also, if a 'custom_rightgroups' file is provided, the individuals from the first column of that file that are present in the .ind file will have the custom label specified in the second column of that file set as their population ID, effectively creating custom populations. This is useful, because oftentimes the populations specified in the .ind file are not exactly those that one wants to use as right groups.
+The .ind file that was passed to the pipeline is moved to .original_ind, with the modified .ind file takings its place so it gets recognized as part of the fileset downstream. If a .original_ind already exists for the used fileset, the move of .ind to .original_ind is omitted to avoid overwriting during repeated pipeline executions.
+
+
+### STEP 2:
+**Scripts**: 2_f2_extraction_indivduals.sh, f2_extraction_regional_individuals_2.R
+
+For each region, this script computes f2 stats between all its individuals and then reads them into one cummulative .rds file. The individual f2 stats will be saved under
+'f2_directory'/regional_pairwise/regionName, the .rds file under 'f2_directory'/f2_blocks/regional_pairwise/regionName.rds. This step is omitted when 'precompute_f2' is set to F.
+
+### STEP 3:
+**Scripts**: 3_pairwise_pvalues_onF2data.sh, qpadm_oneComp_parallelized_onF2data_3_11_13.R
+
+This script runs a one-component model of qpadm for every unique pair of individuals in each region in parallelized manner, using precomputed f2 stats as data input. The number of cores specified in
+'n_cores' are used during computation. For every region, a tab separated file will be saved to 'output_folder'/metadata/regionName_pvalues_pairwise, holding L and T in the first two columns
+and the resulting p-value of the model in the third.
+
+**Script**: 3b_pairwise_pvalues_onFileset.sh, qpadm_oneComp_parallelized_onFileset_3b_11b_13b.R
+
+If 'precomptue_f2' is set to F, the one-component qpadm models are run with the fileset itself as input data. Qpadm will be run with default arguments when this option is chosen. As above,
+the results will be saved to a file for each region in 'output_folder'/metadata.
+
+### STEP 4:
+**Scripts**: 4_transform_p_to_d.sh, transform_pvalues_to_dvalues_4.R
+
+The tab separated p-value table of the former step is transformed into a tab separated dissimilarity matrix. A p-value is transformed into a dissimilarity value by calculating d = -log10(p-value),
+turning low p-values - which favor rejection of the null-hypothesis that L and T form a clade - into high dissimilarity scores. The resulting d-matrix is saved to 'output_folder'/metadata/regionName_dmatrix.
+
+### STEP 5:
+**Script**: 5_cluster_upon_dMatrix.sh
+
+The UPGMA algorithm implemented in pythons scipy.cluster.hierarchy (v 1.6.1) is used to perform hierarchical clustering on each regional d-matrix. The hierarchical clusters are then split along a
+dissimilarity cut-off determined by calculating c = ... ('pval_threshold_clustering)', ensuring the cutoff value corresponds to the percentage threshold specified by 'pval_threshold_clustering'.
+The resulting flat clusters of each region are saved to a tab separated text file called 'output_folder'/metadata/regionName_clusters, which shows the regions IDs in the first column and the assigned cluster
+number in the second column. Now the initial dataframe is created for each region under 'output_folder'/regionName_df which has "ID" and "Cluster" as header, where cluster assignment is annotated as
+regionName_clusterNumber to allow differentiation of clusters between regions.
+
+### STEP 6:
+**Script**: 6_annotate_clusterType.sh
+
+For each region, cluster type is annotated as majority or potential_outlier, by determining the absolute size of the cluster and the percentage of the regions individuals the cluster contains and comparing
+those sizes against 'outlier_threshold_absolute' and 'outlier_threshold_relative'. If a cluster contains no more samples then the former value or less percentage of the regions IDs than the latter, it
+is considered a potential outlier cluster. The columns "Frac. Cluster/Region" and "Cluster type" are added to each regions dataframe.
+
+### STEP 7
+**Script**: 7_split_upon_custom_periods.sh
+
+The clusters of each region are split into periodic subclusters. To do so, each samples date in years BP is found from 'dates_file' and compared to the periods boundaries specified in
+'custom_periods'. The columns "Date in years BP" and "Periodic subcluster" are added to each regions dataframe, the latter being annotated in the format regionName_periodName_clusterNumber.
+If the date of a sample is not found in the provided 'dates_file', is not of Integer type or is outside of the periods boundaries, a respective tag will be put into the "Date in years BP" column and
+the subcluster name will be regionName_NA_clusterNumber. If no 'dates_file' is provided, "Date in years BP" will be set NA and the subcluster name will be set as regionName_NA_clusterNumberAdditionaly,
+effectively resulting in no subclassification.
+
+### STEP 8:
+**Script**: 8_calculate_subclusters_fractions.sh
+
+The fraction of a periodic subcluster to the region as well as to the aperiodic main cluster is determined and the columns "Frac. subcluster/region" and "Frac. sucluster/cluster" are added to the data frame.
+
+### STEP 9:
+**Scripts**: 9_update_indfile_to_periodicgroups.sh, manipulate_ind_1_9.R
+
+To allow the comparison of found subclusters in qpadm models, a new .ind file is created that assigns each clustered individuals subcluster as its population ID. The current .ind with individual
+population names is moved to 'output_folder'/metadata/FilesetPrefix.individuals_ind, with the new .ind file taking its place so it gets recognized as part of the fileset downstream. This new and final .ind
+file, which annotates found suclusters as population labels, also gets copied to 'output_folder'/metadata/FilesetPrefix.clusters_ind.
+
+### STEP 10:
+**Script**: 10_f2_extraction_periodic_groups.sh
+
+F2 stats are computed between all subclusters of all regions and read into a cumulative .rds file. The subclusters f2 stats are saved to 'f2_directory'/crossregional_groupwise/subclusterName and the .rds file
+to 'f2_directory'/f2blocks/crossregional_groupwise/all_regions.rds. If 'precompute_f2' is set to F, this step is omitted.
+
+### STEP 11:
+**Scripts**: 11_compute_outlierValidation_pvalues_onF2data.sh, qpadm_oneComp_parallelized_onF2data_3_11_13.R
+
+For every region, every one-component qpadm model consisting of a potential outlier and an in-region majority subcluster is run using the precomputed f2 data as input. The resulting pvalues are saved to a tab separated
+file under 'output_folder'/metdata/regionName_pvalues_outlierValidaton, with the first column denoting the potetnial outlier, the second column a in-region majority subcluster and the third the resulting p-value.
+
+**Scripts**: 11b_compute_outlierValidation_pvalues_onFileset.sh, qpadm_oneComp_parallelized_onFileset_3b_11b_13b.R
+
+If 'precompute_f2' is set to F, the p-values for potential outlier - in-region majority models are computed using the fileset as input data for qpadm. Qpadm will be run with default arguments when this option is
+chosen. As above, the results will be saved to a file for each region in 'output_folder'/metadata.
+
+
+### STEP 12:
+**Script**: 12_validate_outliers_from_pvals.sh
+
+To test whether potential outlier subcluster are truly distinct from regional majority ancestries, it is checked if they have any one-component qpadm model with an in-region majority cluster that had a
+p-value above 'pvalue_threshold_validate'. If so, the potential outlier is cladal to the majority and is therefore no longer considered a potential outlier. The column "subcluster type" is added to the each dataframe,
+denoting "majority", "outlier" or "connected to majority" for the respective cases. For each region, a file is created in 'output_folder'/metadata/regionName_connected subclusters shows every valid model
+that was found in a region between a potential outlier and a in-region majority.
+
+
+### STEP 13:
+**Scripts**: 13_compute_ancestrySearch_pvalues_onF2data.sh, qpadm_oneComp_parallelized_onF2data_3_11_13.R
+
+For every outlier subcluster, one-component qpadm models between the outlier and every majority subcluster from a different region are calculated using the precomputed f2 data as input. The resulting p-values
+are saved to a  tab separated file under 'output_folder'/metadata/regionName_pvalues_ancestrySearch, Storing outlier in the first, majority in the second and the resulting p-value in the third column.
+
+**Scripts**: 13b_compute_ancestrySearch_pvalues_onFileset.sh, qpadm_oneComp_parallelized_onFileset_3b_11b_13b.R
+
+If precompute f2 is set to F, the p-values for outlier - cross-region majority models are computed using the fileset as input data for qpadm. Qpadm will be run with default arguments when this option is
+chosen. As above, the results will be saved to a file for each region in 'output_folder'/metadata.
+
+
+### STEP 14:
+**Script**: 14_find_potAncs_from_pvals.sh
+
+If a one-conponent model of a outlier subcluster and a trans-region majority had a p-value above 'pvalue_threshold_ancestry', the majority is considered to be cladal to the outlier and is therefore considered
+a potential source to the outlier. For each region, a tab separated file is created under 'output_folder'/metadata/regionName_potential_outlierSources, where each such instance is saved with the outlier in
+the first and the potential source in the second column. If a has no potential sources found, its written into 'output_folder'/metadata/regions_wo_ancestries, to allow a user to quickly discern such cases.
+
+### STEP 15:
+**Scripts**: 15_compute_modelComp_pvals.sh, qpadm_modelComp_parallelized_onF2data_15.R
+
+In this step, p-values for model-competition are computed. Model-competition is a process in which several potential sources that were found for one outlier are compteted against each other. Consider an
+outlier T and its potential sources x and y. Model competition means that the fit of every potential source is retested while adding another potential source to the reference populations R. If the formerly
+valid model of T and x is rejected when y is part of R, it suggests that there is some siginificant allele sharing between y and T that cannot be explained by x. Therefore x is considered suboptimal to y as
+a source. To allow that process, every one-component qpadm model is run that consists of an outlier with more than one sources, one of its potential sources and the set of reference populations with one of its
+other potential sources added, using precomputed f2 stats as input data. The resulting p-values are saved to 'output_folder'/metadata/regionName_pvalues_modelCompetition, where the first column denotes the
+outlier, the second column the source used as left component, the third column the competitor rotated into the reference set and the fourth column the resulting p-value.
+
+**Scripts**: 15b_compute_modelComp_pvals_onFileset.sh, qpadm_modelComp_parallelized_onFileset_15b.R
+
+If 'precompute_f2' is set to F, the p-values for model competition are computed using the eigenstrat-fileset as input data for qpadm. Qpadm will be run with default arguments when this option is
+chosen. As above, the results will be saved to a file for each region in 'output_folder'/metadata.
+
+### STEP 16:
+**Script**: 16_find_suboptimalAncs_from_pvals.sh
+
+Model-competition is achieved by checking for every source x of an outlier if it has a model_competition model where the model is rejected, in which case source x is written to a temporary list of suboptimal
+sources. In an ideal scenario, some or all but one sources are suboptimal, and only the sources that are not suboptimal to any other are kept. However, due to the nature of qpadm, it can happen that all sources
+are suboptimal to another one, i.e. if source x has some allele sharing with outlier T that cannot be explained by source y, but also y has some allele sharing (with other parts of the genome) with T that
+cannot be explained by x, resulting in both being suboptimal to each other. In such a case, where every source of an outlier is suboptimal to another of its sources, all sources of the outlier are kept
+to avoid information loss, and the problematic outlier written to 'output_folder'/metadata/problematic_modelComp. The remaining sources of every outlier are written to
+'output_folder'/metadata/regionName_potential_outlierSources_modelComped, a tab separated text file which i every line denotes an outlier and one of its sources post model-competition.
+
+### STEP 17:
+**Script**: 17_keep_contemp_or_older_sources.sh
+
+In this final step, for every outlier only the sources that are from the same or an older period are kept. If an outlier only has sources from younger periods, they are kept as well to avoid information loss.
+The final colum "Potential sources" is created, where for every sample belonging to an outlier cluster the remaining sources to its subcluster are listed, separated by a space.
 
 ---
 
