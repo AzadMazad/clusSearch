@@ -111,15 +111,20 @@ A tab separated text file where custom periods can be set upon which the cluster
 is younger period boundary; in years BP. Period boundaries are inclusive, so avoid overlap! If not provided, defaults to clusSearch/.scripts/standard_periods, which divides 10000 to 0 BP into 500 year bins.
 
 Example:
+```
 Iron_Age        2750    1950
 Roman_Imperial  1949    1550
+```
 
 - **`custom_rightgroups`**:
 A tab separated text file to set custom population labels. First column shows individual ID, second column a custom population label. Example:
 
+Example:
+```
 Bichon.SG       WHG
 Canes.SG        WHG
-Chan.SG WHG
+Chan.SG         WHG
+```
 
 - **`outlier_threshold_relative`**:
 Clusters that contain less than the given fraction of the regions samples are considered potential outliers. Takes values between 0 and 1, defaults to 0.05.
