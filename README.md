@@ -1,8 +1,7 @@
 # ClusSearch
 
 ClusSearch is a pipeline that implements a workflow described in the paper "Stable population structure in Europe during the Iron Age, despite high mobility" by Antonio *et al*. (2024).  
-For given regions, it groups genetically similar individuals into clusters, which are categorized into majority and potential outlier clusters depending on cluster size. These clusters are then split into periodic subclusters.  
-The resulting subclusters are compared inside and across regions to confirm outlier status and to find potential sources for outlier clusters.
+For given regions, it groups genetically similar individuals into clusters, which are categorized into majority and potential outlier clusters depending on cluster size. These clusters are then split into periodic subclusters. The resulting subclusters are compared inside and across regions to confirm outlier status and to find potential sources for outlier clusters.
 
 The central tool of this workflow is **Admixtools2 qpadm**, which is applied as one-component models. Given a target `T`, a left component `L`, and a group of reference populations `R`, such a model tests against the null hypothesis that `T` and `L` form a clade in respect to `R`. A resulting p-value above the significance threshold therefore means that `L` and `T` do form a clade. This concept is used for initial clustering of each regions individuals, as well as for confirming outlier status of potential outlier clusters, source detection for confirmed outliers and model competition of multiple potential sources. See detailed description of the pipeline steps below for more detaiis.
 
@@ -10,54 +9,65 @@ The central tool of this workflow is **Admixtools2 qpadm**, which is applied as 
 
 ## Requirements & Installation
 
-ClusSearch is a **bash based pipeline**. You need a bash compatible environment to run it.
-**Linux Users** nalskdjlaskdjl
+### Platform Requirements
+
+ClusSearch is a **bash-based pipeline**, so you need to have a bash compatible environment to execute it. 
+On **Linux Systems**, bash is the default shell of the terminal application.
+**Mac Users** also have acces to a bash compatible terminal by default. You can see how to open it [here](https://support.apple.com/de-de/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac).
 **Windows Users** can install the Windows Subsystem  for Linux (WSL). For info about WSL and its installation, see [microsofts WSL article](https://learn.microsoft.com/en-us/windows/wsl/install).
-**Mac Users** have acces to a bash compatible terminal by default. You can see how to open it [here](https://support.apple.com/de-de/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac).
 
-The following dependencies are necessary:
-- **`R`**
-- **`Python 3`**
-- **`R libraries`**: dplyr, tidyverse, reticulate, filelock, devtools, admixtools
-- **`Python packages`**: scipy
-
-For easy installment, a installer script is part of the pipeline distribution.
-
-### 1. Download and Extract the Pipeline
+### Setup
+#### 1. Download and Extract the Pipeline
 1. Go to the [Releases page](https://github.com/YourGitHubUsername/clusSearch/releases) and download the latest ZIP file.
 2. Extract the ZIP file into a directory of your choice.
 
+The extracted directory should be of this structure:
+```
+clusSearch/
+├── install_depencies.sh
+├── exec.sh
+├── .scripts/
+│   ├── 1_initial_indfile_manipulation.sh
+│   ├── 2_f2_extraction_individuals.sh
+│   ├── ...
+├── example_param
+├── example_data/
+│   ├── ids_directory/
+│   └── ...
+└── README.md
+```
+**CAUTION**: Do not move `exec.sh` individually to another location. It calls scripts from `clusSearch/.scripts/`, and therefore needs to be located in the `clusSearch/` directory when executed.
+
 ### 2. Make Scripts Executable
-To ensure all scripts are executable, run the following commands in the extracted directory:
+In your bash envitonment, navigate into the extracted clusSearch directory and excute the following command to make sure all scripts are executable:
 ```bash
 chmod +x *.sh
 chmod +x .scripts/*.sh
 ```
 
 ### 3. Install Dependencies
-ClusSearch includes a script to install required dependencies automatically. If you operate on a Mac system, please make sure **Homebrewer** is installed before you execute the installation script. To execute the installation script, run the following command:
-```bash
-./install_dependencies.sh
-```
-This script will install the following dependencies:
+The following dependencies are needed to run the pipeline:
 - **`R`**
 - **`Python 3`**
 - **`R libraries`**: dplyr, tidyverse, reticulate, filelock, devtools, admixtools
 - **`Python packages`**: scipy
 
+For easy installation, you will find an installer script `install_depencies.sh` in the clusSearch directory. If you are on a **Mac System**, be aware that [Homebrewer](https://brew.sh/) is necessary to succesfully run the installer. To execute the installation script, run the following command:
+```bash
+./install_dependencies.sh
+```
+This script will install the following dependencies:
+
 ---
 
 ## Execution
-
-To run ClusSearch, execute the `exec.sh` script inside the ClusSearch directory and provide a parameter file:
+If all dependencies are sucessfully installed you are ready to run ClusSearch. To run ClusSearch, execute the `exec.sh` script inside the ClusSearch directory and pass a parameter file as command line argument:
 ```bash
 ~/path/to/clusSearch/exec.sh parameter_file
 ```
+An example parameter file and all necessary data for the corresponding example run are provided with the distribution. See below for a detailed description of the parameter file and all parameters.
 
-### Important Notes:
-- ClusSearch will create a tab-separated dataframe for each region and dynamically add columns with new information as it proceeds through the workflow.
-- An example parameter file is provided in the ClusSearch directory, together with all necessary supplementary files for a quick-start example run.
-- **CAUTION**: Do not move `exec.sh` individually to another location. It calls scripts from `clusSearch/.scripts/`, and therefore needs to be located in the `clusSearch/` directory when executed.
+During its execution, clusSearch will create a tab_separated dataframe for each region passed, adding columns with new information as it proceeds through the workflow. For a detailed description of all steps, see below.
 
 ---
 
