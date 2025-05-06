@@ -56,7 +56,7 @@ The script will install the following dependencies:
 - **`R libraries`**: dplyr, tidyverse, reticulate, filelock, devtools, admixtools
 - **`Python packages`**: scipy
 
-To see which Versions where used during the project, see [here](#Program).
+To see which Versions where used during the project, see [here](#program-versions-used-during-project).
 
 ## Execution
 If all dependencies are sucessfully installed you are ready to run ClusSearch. To run ClusSearch, execute the `exec.sh` script inside the ClusSearch directory and pass a parameter file as command line argument:
