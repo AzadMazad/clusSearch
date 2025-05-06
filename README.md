@@ -1,14 +1,27 @@
 # ClusSearch
 
-ClusSearch is a pipeline that implements a workflow described in the paper "Stable population structure in Europe during the Iron Age, despite high mobility" by Antonio et al. (2024).  
-For given regions, it groups genetically similar individuals into clusters, which are categorized into majority and potential outlier clusters. These clusters are then split into periodic subclusters.  
+ClusSearch is a pipeline that implements a workflow described in the paper "Stable population structure in Europe during the Iron Age, despite high mobility" by Antonio *et al*. (2024).  
+For given regions, it groups genetically similar individuals into clusters, which are categorized into majority and potential outlier clusters depending on cluster size. These clusters are then split into periodic subclusters.  
 The resulting subclusters are compared inside and across regions to confirm outlier status and to find potential sources for outlier clusters.
 
 The central tool of this workflow is **Admixtools2 qpadm**, which is applied as one-component models. Given a target `T`, a left component `L`, and a group of reference populations `R`, such a model tests against the null hypothesis that `T` and `L` form a clade in respect to `R`. A resulting p-value above the significance threshold therefore means that `L` and `T` do form a clade. This concept is used for initial clustering of each regions individuals, as well as for confirming outlier status of potential outlier clusters, source detection for confirmed outliers and model competition of multiple potential sources. See detailed description of the pipeline steps below for more detaiis.
 
 ---
 
-## Installation
+## Requirements & Installation
+
+ClusSearch is a **bash based pipeline**. You need a bash compatible environment to run it.
+**Linux Users** nalskdjlaskdjl
+**Windows Users** can install the Windows Subsystem  for Linux (WSL). For info about WSL and its installation, see [microsofts WSL article](https://learn.microsoft.com/en-us/windows/wsl/install).
+**Mac Users** have acces to a bash compatible terminal by default. You can see how to open it [here](https://support.apple.com/de-de/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac).
+
+The following dependencies are necessary:
+- **`R`**
+- **`Python 3`**
+- **`R libraries`**: dplyr, tidyverse, reticulate, filelock, devtools, admixtools
+- **`Python packages`**: scipy
+
+For easy installment, a installer script is part of the pipeline distribution.
 
 ### 1. Download and Extract the Pipeline
 1. Go to the [Releases page](https://github.com/YourGitHubUsername/clusSearch/releases) and download the latest ZIP file.
@@ -17,17 +30,20 @@ The central tool of this workflow is **Admixtools2 qpadm**, which is applied as 
 ### 2. Make Scripts Executable
 To ensure all scripts are executable, run the following commands in the extracted directory:
 ```bash
-chmod +x exec.sh
+chmod +x *.sh
 chmod +x .scripts/*.sh
 ```
-Note: Only `.sh` files in the `.scripts/` directory require execution permissions. Other non-shell files do not need modification.
 
 ### 3. Install Dependencies
-ClusSearch includes a script to install required dependencies automatically. Run the following command:
+ClusSearch includes a script to install required dependencies automatically. If you operate on a Mac system, please make sure **Homebrewer** is installed before you execute the installation script. To execute the installation script, run the following command:
 ```bash
 ./install_dependencies.sh
 ```
-This script will install necessary Python packages, R libraries, and external tools (e.g., Admixtools2) required for the pipeline.
+This script will install the following dependencies:
+- **`R`**
+- **`Python 3`**
+- **`R libraries`**: dplyr, tidyverse, reticulate, filelock, devtools, admixtools
+- **`Python packages`**: scipy
 
 ---
 
