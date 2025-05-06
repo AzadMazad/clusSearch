@@ -1,6 +1,6 @@
 # ClusSearch
 
-ClusSearch is a pipeline that implements a workflow described in the paper "Stable population structure in Europe during the Iron Age, despite high mobility" by Antonio *et al*. (2024). For given regions, it groups genetically similar individuals into clusters, identifies outliers within regions and traces their potential sources across regions.
+ClusSearch is a pipeline that implements a workflow described in the paper "Stable population structure in Europe since the Iron Age, despite high mobility" by Antonio *et al*. (2024). For given regions, it groups genetically similar individuals into clusters, identifies outliers within regions and traces their potential sources across regions.
 
 The central tool of this workflow is **Admixtools2 qpadm**, which is applied as one-component models. Given a target `T`, a left component `L`, and a group of reference populations `R`, such a model tests against the null hypothesis that `T` and `L` form a clade in respect to `R`. A resulting p-value above the significance threshold therefore means that `L` and `T` do form a clade. This concept is used for initial clustering of each regions individuals, as well as for confirming outlier status of potential outlier clusters, source detection for confirmed outliers and model competition of multiple potential sources. For a full breakdown of the workflow, see [Steps](#steps).
 
@@ -215,14 +215,14 @@ the results will be saved to a file for each region in 'output_folder'/metadata.
 #### STEP 4: Transformation of p-value tables into dissimilarity matrices
 **Scripts**: 4_transform_p_to_d.sh, transform_pvalues_to_dvalues_4.R
 
-The tab separated p-value table of the former step is transformed into a tab separated dissimilarity matrix. A p-value is transformed into a dissimilarity value by calculating d = -log10(p-value),
+The tab separated p-value table of the former step is transformed into a tab separated dissimilarity matrix. A p-value is transformed into a dissimilarity value by calculating $d = -\log_{10}(\text{p-value})$,
 turning low p-values - which favor rejection of the null-hypothesis that L and T form a clade - into high dissimilarity scores. The resulting d-matrix is saved to 'output_folder'/metadata/regionName_dmatrix.
 
 #### STEP 5: Clustering each regions individuals
 **Script**: 5_cluster_upon_dMatrix.sh
 
 The UPGMA algorithm implemented in pythons scipy.cluster.hierarchy (v 1.6.1) is used to perform hierarchical clustering on each regional d-matrix. The hierarchical clusters are then split along a
-dissimilarity cut-off determined by calculating c = ... ('pval_threshold_clustering)', ensuring the cutoff value corresponds to the percentage threshold specified by 'pval_threshold_clustering'.
+dissimilarity cut-off determined by calculating $d = -\log_{10}(\text{p-value})$, ensuring the cutoff value corresponds to the percentage threshold specified by 'pval_threshold_clustering'.
 The resulting flat clusters of each region are saved to a tab separated text file called 'output_folder'/metadata/regionName_clusters, which shows the regions IDs in the first column and the assigned cluster
 number in the second column. Now the initial dataframe is created for each region under 'output_folder'/regionName_df which has "ID" and "Cluster" as header, where cluster assignment is annotated as
 regionName_clusterNumber to allow differentiation of clusters between regions.
