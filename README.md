@@ -55,9 +55,8 @@ The script will install the following dependencies:
 - **`Python 3`**
 - **`R libraries`**: dplyr, tidyverse, reticulate, filelock, devtools, admixtools
 - **`Python packages`**: scipy
-
 ---
-
+To see which Versions where used during the project, see [here](#Program) 
 ## Execution
 If all dependencies are sucessfully installed you are ready to run ClusSearch. To run ClusSearch, execute the `exec.sh` script inside the ClusSearch directory and pass a parameter file as command line argument:
 ```bash
@@ -222,7 +221,7 @@ turning low p-values - which favor rejection of the null-hypothesis that L and T
 **Script**: 5_cluster_upon_dMatrix.sh
 
 The UPGMA algorithm implemented in pythons scipy.cluster.hierarchy (v 1.6.1) is used to perform hierarchical clustering on each regional d-matrix. The hierarchical clusters are then split along a
-dissimilarity cut-off determined by calculating $c = -\log_{10}(\text{pval_threshold_clustering})$, ensuring the cutoff value corresponds to the percentage threshold specified by 'pval_threshold_clustering'.
+dissimilarity cut-off determined by calculating the dissimilarity value corresponding to the specified 'pval_threshold_clustering' , $c = -\log_{10}(\text{pval-cluster-threshold})$.
 The resulting flat clusters of each region are saved to a tab separated text file called 'output_folder'/metadata/regionName_clusters, which shows the regions IDs in the first column and the assigned cluster
 number in the second column. Now the initial dataframe is created for each region under 'output_folder'/regionName_df which has "ID" and "Cluster" as header, where cluster assignment is annotated as
 regionName_clusterNumber to allow differentiation of clusters between regions.
@@ -349,6 +348,14 @@ mv clusSearch/.scripts/scriptName_old.sh clusSearch/.scripts/scriptName.sh
 ```
 
 ---
+
+## Program Versions used during Project
+- **`GNU bash`** version 5.1.16
+- **`R`** version 4.1.2
+- **`Python 3`** version 3.12.7
+- **`R libraries`**: dplyr v1.1.4, tidyverse v2.0.0, reticulate v1.38.0, filelock v1.0.3, devtools v2.4.5, admixtools v2.0.5
+- **`Python packages`**: scipy v1.14.1
+
 
 ## Contact Info
 
