@@ -222,7 +222,7 @@ turning low p-values - which favor rejection of the null-hypothesis that L and T
 **Script**: 5_cluster_upon_dMatrix.sh
 
 The UPGMA algorithm implemented in pythons scipy.cluster.hierarchy (v 1.6.1) is used to perform hierarchical clustering on each regional d-matrix. The hierarchical clusters are then split along a
-dissimilarity cut-off determined by calculating $c = -\log_{10}(\text{'pval_threshold_clustering'})$, ensuring the cutoff value corresponds to the percentage threshold specified by 'pval_threshold_clustering'.
+dissimilarity cut-off determined by calculating $c = -\log_{10}(\text{pval_threshold_clustering})$, ensuring the cutoff value corresponds to the percentage threshold specified by 'pval_threshold_clustering'.
 The resulting flat clusters of each region are saved to a tab separated text file called 'output_folder'/metadata/regionName_clusters, which shows the regions IDs in the first column and the assigned cluster
 number in the second column. Now the initial dataframe is created for each region under 'output_folder'/regionName_df which has "ID" and "Cluster" as header, where cluster assignment is annotated as
 regionName_clusterNumber to allow differentiation of clusters between regions.
