@@ -345,4 +345,4 @@ mv clusSearch/.scripts/scriptName_old.sh clusSearch/.scripts/scriptName.sh
 
 ## Contact Info
 
-If you have any remarks or questions, feel free to contact me via [azhos@students.uni-mainz.de]
+If you have any remarks or questions, feel free to contact me via azhos@students.uni-mainz.de
