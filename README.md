@@ -1,9 +1,8 @@
 # ClusSearch
 
-ClusSearch is a pipeline that implements a workflow described in the paper "Stable population structure in Europe during the Iron Age, despite high mobility" by Antonio *et al*. (2024).  
-For given regions, it groups genetically similar individuals into clusters, which are categorized into majority and potential outlier clusters depending on cluster size. These clusters are then split into periodic subclusters. The resulting subclusters are compared inside and across regions to confirm outlier status and to find potential sources for outlier clusters.
+ClusSearch is a pipeline that implements a workflow described in the paper "Stable population structure in Europe during the Iron Age, despite high mobility" by Antonio *et al*. (2024). For given regions, it groups genetically similar individuals into clusters, identifies outliers within regions and traces their potential sources across regions.
 
-The central tool of this workflow is **Admixtools2 qpadm**, which is applied as one-component models. Given a target `T`, a left component `L`, and a group of reference populations `R`, such a model tests against the null hypothesis that `T` and `L` form a clade in respect to `R`. A resulting p-value above the significance threshold therefore means that `L` and `T` do form a clade. This concept is used for initial clustering of each regions individuals, as well as for confirming outlier status of potential outlier clusters, source detection for confirmed outliers and model competition of multiple potential sources. See detailed description of the pipeline steps below for more detaiis.
+The central tool of this workflow is **Admixtools2 qpadm**, which is applied as one-component models. Given a target `T`, a left component `L`, and a group of reference populations `R`, such a model tests against the null hypothesis that `T` and `L` form a clade in respect to `R`. A resulting p-value above the significance threshold therefore means that `L` and `T` do form a clade. This concept is used for initial clustering of each regions individuals, as well as for confirming outlier status of potential outlier clusters, source detection for confirmed outliers and model competition of multiple potential sources. For a full breakdown of the workflow, see [Steps](#steps).
 
 ---
 
@@ -46,16 +45,17 @@ chmod +x .scripts/*.sh
 ```
 
 ### 3. Install Dependencies
-The following dependencies are needed to run the pipeline:
+For easy installation of dependencies, you will find an installer script in the clusSearch directory. If you are on a **Mac System**, be aware that [Homebrewer](https://brew.sh/) is necessary to succesfully run the installer. To execute the installation script, run the following command:
+```bash
+./install_dependencies.sh
+```
+
+The script will install the following dependencies:
 - **`R`**
 - **`Python 3`**
 - **`R libraries`**: dplyr, tidyverse, reticulate, filelock, devtools, admixtools
 - **`Python packages`**: scipy
 
-For easy installation, you will find an installer script in the clusSearch directory. If you are on a **Mac System**, be aware that [Homebrewer](https://brew.sh/) is necessary to succesfully run the installer. To execute the installation script, run the following command:
-```bash
-./install_dependencies.sh
-```
 ---
 
 ## Execution
@@ -63,9 +63,9 @@ If all dependencies are sucessfully installed you are ready to run ClusSearch. T
 ```bash
 ~/path/to/clusSearch/exec.sh parameter_file
 ```
-An example parameter file and all necessary data for the corresponding example run are provided with the distribution. See below for a detailed description of the parameter file and all parameters.
+An example parameter file and all necessary data for the corresponding example run are provided with the distribution. For a detailed description of the parameter file and all parameters, see [Parameters](#Parameters) section.
 
-During its execution, clusSearch will create a tab_separated dataframe for each region passed, adding columns with new information as it proceeds through the workflow. For a detailed description of all steps, see below.
+During its execution, clusSearch will create a tab_separated dataframe for each region passed, adding columns with new information as it proceeds through the workflow. For a detailed description of every pipeline step, see [Steps](#steps) section f.
 
 ---
 
@@ -100,9 +100,11 @@ A tab separated text file that has individual IDs in first column, and date in y
 If not provided, date specific annotations will be set as NA.
 
 Example:
-I16326  2625
-I2446   4215
-I13778  3234
+```
+I16326   2625
+I2446    4215
+I13778   3234
+```
 
 - **`periods_file`**:
 A tab separated text file where custom periods can be set upon which the clusters are split into periodic subclusters. First column is periods name, second column is older period boundary and third column
