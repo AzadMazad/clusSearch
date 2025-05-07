@@ -81,23 +81,24 @@ rightlist: path/to/rightlist_textfile
 ```
 
 ### Mandatory Parameters:
-- **`eigenstrat_fileset`**: Prefix of the eigenstrat fileset (.geno, .snp, .ind files) containing all samples to be clustered and reference set individuals.  
+- **`eigenstrat_fileset`**:
+Prefix of the eigenstrat fileset (.geno, .snp, .ind files) containing all samples to be clustered and reference set individuals.  
   **CAUTION**: Do not have the Plink format (.bed, .bim, .fam files) of the same fileset in the same directory. Otherwise, Admixtools2's `extract_f2` may attempt to use the `.fam` file, which does not have updated population labels, and fail.
 
-- **`ids_directory`**: A directory holding text files, each specifying the individuals of a region, one ID per line. The text file names must end with `_IDs`. The string before this suffix will be considered the region's name (e.g., `Sardinia_IDs`).
+- **`ids_directory`**:
+A directory holding text files, each specifying the individuals of a region, one ID per line. The text file names **must end with `_IDs`**. The string before this suffix will be considered the region's name (e.g., `Sardinia_IDs`). **Hint**: Due to the lists being fetched by the suffix, you can easily change what regions from your directory you want to run the pipeline with by changing the suffix, e.g. to `_ids`.
 
-- **`rightlist`**: A text file specifying the populations to be used as the "rightlist". One population ID per line.
+- **`rightlist`**:
+A text file specifying the populations to be used as the "rightlist". One population ID per line.
 
-- **`f2_directory`**: A directory where precomputed f2 stats are saved. If precomputation is turned off, this parameter is not necessary.
-
-- **`python_path`**: Path to the Python installation, necessary for a clustering package.
+- **`f2_directory`**:
+A directory where precomputed f2 stats are saved. If precomputation is turned off, this parameter is not necessary.
 
 - **`output_folder`**: A directory where the results are saved.
 
 ### Optional Parameters:
 - **`dates_file`**:
 A tab separated text file that has individual IDs in first column, and date in years BP in second column. The dates are necessary to split clusters into periodic subclusters.
-If not provided, date specific annotations will be set as NA.
 
 Example:
 ```
@@ -105,6 +106,11 @@ I16326   2625
 I2446    4215
 I13778   3234
 ```
+
+If not provided, date specific annotations will be set as NA. For the standard use-case, it is recommended to provide a dates-file holding date information on every individual from the regional ID lists.
+Providing no dates file at all will result in all subclusters having the same period label ("NA"), effectively not splitting the initial clusters at all. This might be an option if you are interested in 
+running the initial clusters through the whole pipeline without subclustering them.
+
 
 - **`periods_file`**:
 A tab separated text file where custom periods can be set upon which the clusters are split into periodic subclusters. First column is periods name, second column is older period boundary and third column
@@ -175,6 +181,9 @@ Argument of f2_from_precomp. Set to F to keep blocks containing missing values r
 - **`afprod`**:
 Argument of f2_from_precomp. Set to T to return negative allele frequency products instead of f2 estimates. Results in more precise f4-stats if data had large amounts of missingness. Defaults to F.
 
+- **`python_path`**:
+If no python3 path is provided, it is automatically assigned by the pipeline by running the bash command `which python3´. If you want to set a specific path, e.g. in case you have several python3 installations, you can specifiy the path to your preferred installation here. 
+
 ---
 
 ## Steps
@@ -207,10 +216,12 @@ This script runs a one-component model of qpadm for every unique pair of individ
 'n_cores' are used during computation. For every region, a tab separated file will be saved to 'output_folder'/metadata/regionName_pvalues_pairwise, holding L and T in the first two columns
 and the resulting p-value of the model in the third.
 
-**Script**: 3b_pairwise_pvalues_onFileset.sh, qpadm_oneComp_parallelized_onFileset_3b_11b_13b.R
+**Scripts**: 3b_pairwise_pvalues_onFileset.sh, qpadm_oneComp_parallelized_onFileset_3b_11b_13b.R
 
 If 'precomptue_f2' is set to F, the one-component qpadm models are run with the fileset itself as input data. Qpadm will be run with default arguments when this option is chosen. As above,
 the results will be saved to a file for each region in 'output_folder'/metadata.
+
+Warnings and Errors cast by the qpadm executions will collected saved to text files in 'output_folder'/metadata, to avoid cluttering of the console. 
 
 #### STEP 4: Transformation of p-value tables into dissimilarity matrices
 **Scripts**: 4_transform_p_to_d.sh, transform_pvalues_to_dvalues_4.R
@@ -272,6 +283,7 @@ file under 'output_folder'/metdata/regionName_pvalues_outlierValidaton, with the
 If 'precompute_f2' is set to F, the p-values for potential outlier - in-region majority models are computed using the fileset as input data for qpadm. Qpadm will be run with default arguments when this option is
 chosen. As above, the results will be saved to a file for each region in 'output_folder'/metadata.
 
+Warnings and Errors cast by the qpadm executions will collected saved to text files in 'output_folder'/metadata, to avoid cluttering of the console.
 
 #### STEP 12: Validating outliers
 **Script**: 12_validate_outliers_from_pvals.sh
@@ -293,6 +305,7 @@ are saved to a  tab separated file under 'output_folder'/metadata/regionName_pva
 If precompute f2 is set to F, the p-values for outlier - cross-region majority models are computed using the fileset as input data for qpadm. Qpadm will be run with default arguments when this option is
 chosen. As above, the results will be saved to a file for each region in 'output_folder'/metadata.
 
+Warnings and Errors cast by the qpadm executions will collected saved to text files in 'output_folder'/metadata, to avoid cluttering of the console.
 
 #### STEP 14: Finding ancestries
 **Script**: 14_find_potAncs_from_pvals.sh
@@ -315,6 +328,8 @@ outlier, the second column the source used as left component, the third column t
 
 If 'precompute_f2' is set to F, the p-values for model competition are computed using the eigenstrat-fileset as input data for qpadm. Qpadm will be run with default arguments when this option is
 chosen. As above, the results will be saved to a file for each region in 'output_folder'/metadata.
+
+Warnings and Errors cast by the qpadm executions will collected saved to text files in 'output_folder'/metadata, to avoid cluttering of the console.
 
 #### STEP 16: Model-competing multiple ancestry sources
 **Script**: 16_find_suboptimalAncs_from_pvals.sh
