@@ -17,7 +17,7 @@ On **Linux Systems**, bash is the default shell of the terminal application.
 
 ### Setup
 #### 1. Download and Extract the Pipeline
-1. Go to the [Releases page](https://github.com/YourGitHubUsername/clusSearch/releases) and download the latest ZIP file.
+1. Go to the [Releases page](https://github.com/AzadMazad/clusSearch/releases) and download the latest ZIP file.
 2. Extract the ZIP file into a directory of your choice.
 
 The extracted directory have this structure:
