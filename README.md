@@ -96,8 +96,7 @@ A directory where precomputed f2 stats are saved. If precomputation is turned of
 - **`output_folder`**: A directory where the results are saved.
 
 ### Optional Parameters:
-- **`dates_file`** (Optional):  
-  A tab-separated text file that has individual IDs in the first column and date in years BP in the second column. The dates are necessary to split clusters into periodic subclusters.
+- **`dates_file`** (Optional): A tab-separated text file that has individual IDs in the first column and date in years BP in the second column. The dates are necessary to split clusters into periodic subclusters.
 
   Example:  
   ```
