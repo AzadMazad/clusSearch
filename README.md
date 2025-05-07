@@ -82,11 +82,10 @@ rightlist: path/to/rightlist_textfile
 
 ### Mandatory Parameters:
 - **`eigenstrat_fileset`**:
-Prefix of the eigenstrat fileset (.geno, .snp, .ind files) containing all samples to be clustered and reference set individuals.  
-  **CAUTION**: Do not have the Plink format (.bed, .bim, .fam files) of the same fileset in the same directory. Otherwise, Admixtools2's `extract_f2` may attempt to use the `.fam` file, which does not have updated population labels, and fail.
+Prefix of the eigenstrat fileset (.geno, .snp, .ind files) containing all samples to be clustered and reference set individuals. **CAUTION**: Do not have the Plink format (.bed, .bim, .fam files) of the same fileset in the same directory. Otherwise, Admixtools2's `extract_f2` may attempt to use the `.fam` file, which does not have updated population labels, and fail.
 
 - **`ids_directory`**:
-A directory holding text files, each specifying the individuals of a region, one ID per line. The text file names **must end with `_IDs`**. The string before this suffix will be considered the region's name (e.g., `Sardinia_IDs`). **Hint**: Due to the lists being fetched by the suffix, you can easily change what regions from your directory you want to run the pipeline with by changing the suffix, e.g. to `_ids`.
+A directory holding text files, each specifying the individuals of a region, one ID per line. The text file names **must end with** "_IDs" (e.g. `Sardinia_IDs`). The string before this suffix will be considered the region's name (e.g. "Sardinia"). **Hint**: Due to the lists being fetched by the suffix, you can simply change the suffix of a list to have it ignored by the pipeline (e.g. `Sardinia_ids`).
 
 - **`rightlist`**:
 A text file specifying the populations to be used as the "rightlist". One population ID per line.
