@@ -1,6 +1,6 @@
 # ClusSearch
 
-ClusSearch is a pipeline that implements a workflow described in the paper "Stable population structure in Europe since the Iron Age, despite high mobility" by Antonio *et al*. (2024). For given regions, it groups genetically similar individuals into clusters, identifies outliers within regions and traces their potential sources across regions.
+ClusSearch is a pipeline that implements a workflow described in the paper ["Stable population structure in Europe since the Iron Age, despite high mobility" by Antonio *et al*. (2024)](https://elifesciences.org/articles/79714). For given regions, it groups genetically similar individuals into clusters, identifies outliers within regions and traces their potential sources across regions.
 
 The central tool of this workflow is **Admixtools2 qpadm**, which is applied as one-component models. Given a target `T`, a left component `L`, and a group of reference populations `R`, such a model tests against the null hypothesis that `T` and `L` form a clade in respect to `R`. A resulting p-value above the significance threshold therefore means that `L` and `T` do form a clade. This concept is used for initial clustering of each regions individuals, as well as for confirming outlier status of potential outlier clusters, source detection for confirmed outliers and model competition of multiple potential sources. For a full breakdown of the workflow, see [Steps](#steps).
 
@@ -116,15 +116,16 @@ A directory where precomputed f2 stats are saved. If precomputation is turned of
   Roman_Imperial  1949    1550
   ```
 
-- **`custom_rightgroups`**:
-A tab separated text file to set custom population labels. First column shows individual ID, second column a custom population label. Example:
+- **`custom_rightgroups`**: A tab separated text file to set custom population labels. First column shows individual ID, second column a custom population label. Example:
 
-Example:
-```
-Bichon.SG       WHG
-Canes.SG        WHG
-Chan.SG         WHG
-```
+  Example:
+  ```
+  Bichon.SG       WHG
+  Canes.SG        WHG
+  Chan.SG         WHG
+  ```
+
+  It is common to use custom populations like WHG (Western Hunter Gatherers) as populations for qpadms rightlist.
 
 - **`outlier_threshold_relative`**:
 Clusters that contain less than the given fraction of the regions samples are considered potential outliers. Takes values between 0 and 1, defaults to 0.05.
