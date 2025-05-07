@@ -63,7 +63,7 @@ If all dependencies are sucessfully installed you are ready to run ClusSearch. T
 ```bash
 ~/path/to/clusSearch/exec.sh parameter_file
 ```
-An example parameter file (`parameter_file_example`) and all necessary data for the corresponding example run is provided with the distribution. Use this example parameter file when executing the pipe for a quickstart example run. For a detailed description of the parameter file and all parameters, see [Parameters](#Parameters) section.
+An example parameter file (`parameter_file_example`) and all necessary data for the corresponding example run is provided with the distribution. Use this example parameter file when executing the pipe for a quickstart example run, and consider increasing the parameters `num_cores` and `max_mem`, as they are set quite low to avoid unaware users freezing their computers. For a detailed description of the parameter file and all parameters, see [Parameters](#Parameters) section.
 
 During its execution, clusSearch will create a tab separated dataframe for each region passed, adding columns with new information as it proceeds through the workflow. For a detailed description of every pipeline step, see [Steps](#steps) section f.
 
