@@ -96,19 +96,17 @@ A directory where precomputed f2 stats are saved. If precomputation is turned of
 - **`output_folder`**: A directory where the results are saved.
 
 ### Optional Parameters:
-- **`dates_file`**:
-A tab separated text file that has individual IDs in first column, and date in years BP in second column. The dates are necessary to split clusters into periodic subclusters.
+- **`dates_file`** (Optional):  
+  A tab-separated text file that has individual IDs in the first column and date in years BP in the second column. The dates are necessary to split clusters into periodic subclusters.
 
-Example:
-```
-I16326   2625
-I2446    4215
-I13778   3234
-```
+  Example:  
+  ```
+  I16326   2625
+  I2446    4215
+  I13778   3234
+  ```
 
-If not provided, date specific annotations will be set as NA. For the standard use-case, it is recommended to provide a dates-file holding date information on every individual from the regional ID lists.
-Providing no dates file at all will result in all subclusters having the same period label ("NA"), effectively not splitting the initial clusters at all. This might be an option if you are interested in 
-running the initial clusters through the whole pipeline without subclustering them.
+  If not provided, date-specific annotations will be set as **NA**. For the standard use-case, it is recommended to provide a dates file holding date information on every individual from the regional ID lists. Providing no dates file at all will result in all subclusters having the same period label ("NA"), effectively not splitting the initial clusters at all. This might be an option if you are interested in running the initial clusters through the whole pipeline without subclustering them.
 
 
 - **`periods_file`**:
