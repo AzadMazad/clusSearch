@@ -65,7 +65,7 @@ If all dependencies are sucessfully installed you are ready to run ClusSearch. T
 ```
 An example parameter file (`parameter_file_example`) and all necessary data for the corresponding example run is provided with the distribution. Use this example parameter file when executing the pipe for a quickstart example run. For a detailed description of the parameter file and all parameters, see [Parameters](#Parameters) section.
 
-During its execution, clusSearch will create a tab_separated dataframe for each region passed, adding columns with new information as it proceeds through the workflow. For a detailed description of every pipeline step, see [Steps](#steps) section f.
+During its execution, clusSearch will create a tab separated dataframe for each region passed, adding columns with new information as it proceeds through the workflow. For a detailed description of every pipeline step, see [Steps](#steps) section f.
 
 ---
 
