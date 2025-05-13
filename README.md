@@ -20,7 +20,7 @@ On **Linux Systems**, bash is the default shell of the terminal application.
 1. Go to the [Releases page](https://github.com/AzadMazad/clusSearch/releases) and download the latest ZIP file.
 2. Extract the ZIP file into a directory of your choice.
 
-The extracted directory have this structure:
+The extracted directory has this structure:
 ```
 clusSearch/
 ├── install_depencies.sh
