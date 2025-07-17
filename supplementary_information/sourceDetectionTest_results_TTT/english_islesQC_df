@@ -1,0 +1,51 @@
+Sample	Cluster	Frac. Cluster/Region	Cluster type	Date in years BP	Periodic subcluster	Frac. subcluster/region	Frac. subcluster/cluster	subcluster type	Potential sources for subcluster
+I11713	english_islesQC_6	.060	majority	2046	english_islesQC_2500to2001_6	.020	.333	majority	-
+I13167	english_islesQC_9	.020	pot. outlier	3090	english_islesQC_3500to3001_9	.020	1.000	outlier	southeastern_europeQC_3500to3001_11 southeastern_europeQC_4000to3501_10 eastern_central_europeQC_4000to3501_4 italy_with_sardiniaQC_3500to3001_11
+I10364	english_islesQC_1	.020	pot. outlier	2925	english_islesQC_3000to2501_1	.020	1.000	outlier	italy_with_sardiniaQC_3500to3001_9 italy_with_sardiniaQC_3500to3001_8 italy_with_sardiniaQC_4500to4001_8 italy_with_sardiniaQC_3000to2501_8
+ALM002_merged	english_islesQC_2	.020	pot. outlier	3800	english_islesQC_4000to3501_2	.020	1.000	outlier	southwestern_europeQC_4000to3501_11 southwestern_europeQC_4000to3501_8 southwestern_europeQC_4000to3501_9 southwestern_europeQC_4000to3501_10 southwestern_europeQC_4500to4001_11
+ALA120	english_islesQC_11	.020	pot. outlier	3550	english_islesQC_4000to3501_11	.020	1.000	outlier	turkeyQC_4000to3501_6 turkeyQC_4000to3501_7 turkeyQC_4500to4001_7 turkeyQC_4000to3501_5 turkeyQC_4500to4001_5
+Kivutkalns207	english_islesQC_10	.020	pot. outlier	2600	english_islesQC_3000to2501_10	.020	1.000	outlier	northern_europeQC_3000to2501_16 northern_europeQC_3000to2501_14 northern_europeQC_4500to4001_7 northern_europeQC_3500to3001_8
+I11148	english_islesQC_7	.720	majority	2292	english_islesQC_2500to2001_7	.520	.722	majority	-
+I11971	english_islesQC_3	.040	pot. outlier	3060	english_islesQC_3500to3001_3	.020	.500	connected to majority	-
+I19657	english_islesQC_7	.720	majority	2183	english_islesQC_2500to2001_7	.520	.722	majority	-
+I11149	english_islesQC_7	.720	majority	2443	english_islesQC_2500to2001_7	.520	.722	majority	-
+I11151	english_islesQC_7	.720	majority	2227	english_islesQC_2500to2001_7	.520	.722	majority	-
+I11152	english_islesQC_7	.720	majority	2179	english_islesQC_2500to2001_7	.520	.722	majority	-
+I14108	english_islesQC_7	.720	majority	2175	english_islesQC_2500to2001_7	.520	.722	majority	-
+I11150	english_islesQC_7	.720	majority	2227	english_islesQC_2500to2001_7	.520	.722	majority	-
+I7568	english_islesQC_7	.720	majority	3400	english_islesQC_3500to3001_7	.100	.138	majority	-
+I21271	english_islesQC_7	.720	majority	2200	english_islesQC_2500to2001_7	.520	.722	majority	-
+I7575	english_islesQC_7	.720	majority	3107	english_islesQC_3500to3001_7	.100	.138	majority	-
+I7577	english_islesQC_7	.720	majority	3198	english_islesQC_3500to3001_7	.100	.138	majority	-
+I12411	english_islesQC_7	.720	majority	2175	english_islesQC_2500to2001_7	.520	.722	majority	-
+I14358	english_islesQC_7	.720	majority	2808	english_islesQC_3000to2501_7	.080	.111	majority	-
+I13716	english_islesQC_6	.060	majority	3223	english_islesQC_3500to3001_6	.020	.333	majority	-
+I17258	english_islesQC_7	.720	majority	2415	english_islesQC_2500to2001_7	.520	.722	majority	-
+I14101	english_islesQC_7	.720	majority	2175	english_islesQC_2500to2001_7	.520	.722	majority	-
+I13731	english_islesQC_7	.720	majority	2246	english_islesQC_2500to2001_7	.520	.722	majority	-
+I2655	english_islesQC_7	.720	majority	3311	english_islesQC_3500to3001_7	.100	.138	majority	-
+I27382	english_islesQC_7	.720	majority	2592	english_islesQC_3000to2501_7	.080	.111	majority	-
+I12774	english_islesQC_6	.060	majority	2554	english_islesQC_3000to2501_6	.020	.333	majority	-
+I14861	english_islesQC_7	.720	majority	2810	english_islesQC_3000to2501_7	.080	.111	majority	-
+I16448	english_islesQC_8	.020	pot. outlier	4175	english_islesQC_4500to4001_8	.020	1.000	connected to majority	-
+I5512	english_islesQC_4	.020	pot. outlier	4250	english_islesQC_4500to4001_4	.020	1.000	connected to majority	-
+I16441	english_islesQC_7	.720	majority	2329	english_islesQC_2500to2001_7	.520	.722	majority	-
+I17264	english_islesQC_7	.720	majority	2225	english_islesQC_2500to2001_7	.520	.722	majority	-
+I21180	english_islesQC_7	.720	majority	2267	english_islesQC_2500to2001_7	.520	.722	majority	-
+I14801	english_islesQC_7	.720	majority	2214	english_islesQC_2500to2001_7	.520	.722	majority	-
+I7573	english_islesQC_7	.720	majority	3520	english_islesQC_4000to3501_7	.020	.027	majority	-
+I21275	english_islesQC_7	.720	majority	2231	english_islesQC_2500to2001_7	.520	.722	majority	-
+I13760	english_islesQC_7	.720	majority	2175	english_islesQC_2500to2001_7	.520	.722	majority	-
+I6774	english_islesQC_3	.040	pot. outlier	4121	english_islesQC_4500to4001_3	.020	.500	outlier	western_europeQC_4500to4001_10 northern_europeQC_4500to4001_17
+I16388	english_islesQC_7	.720	majority	2329	english_islesQC_2500to2001_7	.520	.722	majority	-
+I6771	english_islesQC_7	.720	majority	2042	english_islesQC_2500to2001_7	.520	.722	majority	-
+I19868	english_islesQC_7	.720	majority	2579	english_islesQC_3000to2501_7	.080	.111	majority	-
+I14549	english_islesQC_7	.720	majority	2267	english_islesQC_2500to2001_7	.520	.722	majority	-
+I13680	english_islesQC_7	.720	majority	2224	english_islesQC_2500to2001_7	.520	.722	majority	-
+I16424	english_islesQC_5	.040	pot. outlier	4106	english_islesQC_4500to4001_5	.020	.500	outlier	northern_europeQC_4500to4001_15 northern_europeQC_4500to4001_13
+I21308	english_islesQC_7	.720	majority	2058	english_islesQC_2500to2001_7	.520	.722	majority	-
+I16611	english_islesQC_7	.720	majority	2267	english_islesQC_2500to2001_7	.520	.722	majority	-
+KD049.SG	english_islesQC_5	.040	pot. outlier	3425	english_islesQC_3500to3001_5	.020	.500	connected to majority	-
+I20627	english_islesQC_7	.720	majority	2227	english_islesQC_2500to2001_7	.520	.722	majority	-
+I19042	english_islesQC_7	.720	majority	2245	english_islesQC_2500to2001_7	.520	.722	majority	-
+I19915	english_islesQC_7	.720	majority	3422	english_islesQC_3500to3001_7	.100	.138	majority	-

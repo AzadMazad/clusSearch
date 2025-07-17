@@ -1,0 +1,51 @@
+Sample	Cluster	Frac. Cluster/Region	Cluster type	Date in years BP	Periodic subcluster	Frac. subcluster/region	Frac. subcluster/cluster	subcluster type	Potential sources for subcluster
+I11716	northern_europeQC_5	.060	majority	2051	northern_europeQC_2500to2001_5	.020	.333	majority	-
+I11142	northern_europeQC_13	.100	majority	2067	northern_europeQC_2500to2001_13	.020	.200	majority	-
+ALM004	northern_europeQC_3	.020	pot. outlier	3825	northern_europeQC_4000to3501_3	.020	1.000	outlier	southwestern_europeQC_4000to3501_8 southwestern_europeQC_4000to3501_9 southwestern_europeQC_4500to4001_11 southwestern_europeQC_4000to3501_10 southwestern_europeQC_4000to3501_11
+I20227	northern_europeQC_1	.020	pot. outlier	2565	northern_europeQC_3000to2501_1	.020	1.000	outlier	turkeyQC_3000to2501_1 turkeyQC_4500to4001_1
+I10553	northern_europeQC_4	.020	pot. outlier	3110	northern_europeQC_3500to3001_4	.020	1.000	outlier	italy_with_sardiniaQC_3500to3001_8 italy_with_sardiniaQC_4000to3501_8 italy_with_sardiniaQC_4500to4001_8
+I13169	northern_europeQC_6	.020	pot. outlier	3287	northern_europeQC_3500to3001_6	.020	1.000	outlier	western_europeQC_4000to3501_4 italy_with_sardiniaQC_3500to3001_11 eastern_central_europeQC_4000to3501_4 southeastern_europeQC_3500to3001_11 southeastern_europeQC_4000to3501_10
+I13027	northern_europeQC_13	.100	majority	4039	northern_europeQC_4500to4001_13	.040	.400	majority	-
+s19_V10_2_noUDG.SG	northern_europeQC_7	.180	majority	2573	northern_europeQC_3000to2501_7	.100	.555	majority	-
+oll009_noUDG.SG	northern_europeQC_13	.100	majority	3787	northern_europeQC_4000to3501_13	.040	.400	majority	-
+pcw280_noUDG.SG	northern_europeQC_15	.060	majority	4250	northern_europeQC_4500to4001_15	.060	1.000	majority	-
+s19_X08_1_noUDG.SG	northern_europeQC_7	.180	majority	2819	northern_europeQC_3000to2501_7	.100	.555	majority	-
+Turlojiske3	northern_europeQC_14	.020	pot. outlier	2846	northern_europeQC_3000to2501_14	.020	1.000	connected to majority	-
+s19_V14_2_noUDG.SG	northern_europeQC_8	.020	pot. outlier	3130	northern_europeQC_3500to3001_8	.020	1.000	connected to majority	-
+s19_X14_1_noUDG.SG	northern_europeQC_16	.120	majority	2580	northern_europeQC_3000to2501_16	.020	.166	majority	-
+s19_V11_1_noUDG.SG	northern_europeQC_7	.180	majority	2229	northern_europeQC_2500to2001_7	.040	.222	majority	-
+Kivutkalns209	northern_europeQC_7	.180	majority	2616	northern_europeQC_3000to2501_7	.100	.555	majority	-
+s19_X15_2_noUDG.SG	northern_europeQC_7	.180	majority	3037	northern_europeQC_3500to3001_7	.020	.111	majority	-
+RISE1281_noUDG.SG	northern_europeQC_15	.060	majority	4226	northern_europeQC_4500to4001_15	.060	1.000	majority	-
+s19_VII4_1_noUDG.SG	northern_europeQC_7	.180	majority	2493	northern_europeQC_2500to2001_7	.040	.222	majority	-
+N17_noUDG.SG	northern_europeQC_16	.120	majority	3850	northern_europeQC_4000to3501_16	.020	.166	majority	-
+pcw040_noUDG.SG	northern_europeQC_11	.220	majority	4400	northern_europeQC_4500to4001_11	.220	1.000	majority	-
+N47_noUDG.SG	northern_europeQC_9	.020	pot. outlier	4375	northern_europeQC_4500to4001_9	.020	1.000	connected to majority	-
+N49_noUDG.SG	northern_europeQC_7	.180	majority	4375	northern_europeQC_4500to4001_7	.020	.111	majority	-
+I6580	northern_europeQC_13	.100	majority	4175	northern_europeQC_4500to4001_13	.040	.400	majority	-
+RISE94_noUDG.SG	northern_europeQC_12	.060	majority	4487	northern_europeQC_4500to4001_12	.020	.333	majority	-
+I6537	northern_europeQC_15	.060	majority	4130	northern_europeQC_4500to4001_15	.060	1.000	majority	-
+RISE150_noUDG.SG	northern_europeQC_12	.060	majority	3744	northern_europeQC_4000to3501_12	.040	.666	majority	-
+ber1M_noUDG.SG	northern_europeQC_16	.120	majority	4483	northern_europeQC_4500to4001_16	.080	.666	majority	-
+RISE97_noUDG.SG	northern_europeQC_13	.100	majority	3895	northern_europeQC_4000to3501_13	.040	.400	majority	-
+EKA1_noUDG.SG	northern_europeQC_16	.120	majority	4195	northern_europeQC_4500to4001_16	.080	.666	majority	-
+N44_noUDG.SG	northern_europeQC_11	.220	majority	4400	northern_europeQC_4500to4001_11	.220	1.000	majority	-
+MA971_noUDG.SG	northern_europeQC_11	.220	majority	4400	northern_europeQC_4500to4001_11	.220	1.000	majority	-
+ber2F_noUDG.SG	northern_europeQC_16	.120	majority	4492	northern_europeQC_4500to4001_16	.080	.666	majority	-
+Kivutkalns153	northern_europeQC_10	.020	pot. outlier	2633	northern_europeQC_3000to2501_10	.020	1.000	connected to majority	-
+MA826.RISE00_noUDG.SG	northern_europeQC_16	.120	majority	4442	northern_europeQC_4500to4001_16	.080	.666	majority	-
+MA973_noUDG.SG	northern_europeQC_11	.220	majority	4416	northern_europeQC_4500to4001_11	.220	1.000	majority	-
+I6582	northern_europeQC_5	.060	majority	4171	northern_europeQC_4500to4001_5	.040	.666	majority	-
+Olsund	northern_europeQC_17	.020	pot. outlier	4306	northern_europeQC_4500to4001_17	.020	1.000	connected to majority	-
+pcw260_noUDG.SG	northern_europeQC_5	.060	majority	4237	northern_europeQC_4500to4001_5	.040	.666	majority	-
+pcw070_noUDG.SG	northern_europeQC_11	.220	majority	4321	northern_europeQC_4500to4001_11	.220	1.000	majority	-
+I6531	northern_europeQC_11	.220	majority	4113	northern_europeQC_4500to4001_11	.220	1.000	majority	-
+s19_0LS10_1_noUDG.SG	northern_europeQC_7	.180	majority	2609	northern_europeQC_3000to2501_7	.100	.555	majority	-
+VK531_noUDG.SG	northern_europeQC_2	.020	pot. outlier	4347	northern_europeQC_4500to4001_2	.020	1.000	outlier	-
+s19_X17_2_noUDG.SG	northern_europeQC_7	.180	majority	2819	northern_europeQC_3000to2501_7	.100	.555	majority	-
+pcw362_noUDG.SG	northern_europeQC_11	.220	majority	4305	northern_europeQC_4500to4001_11	.220	1.000	majority	-
+pcw061_noUDG.SG	northern_europeQC_11	.220	majority	4321	northern_europeQC_4500to4001_11	.220	1.000	majority	-
+pcw211_noUDG.SG	northern_europeQC_11	.220	majority	4300	northern_europeQC_4500to4001_11	.220	1.000	majority	-
+N45_noUDG.SG	northern_europeQC_11	.220	majority	4375	northern_europeQC_4500to4001_11	.220	1.000	majority	-
+pcw361_noUDG.SG	northern_europeQC_11	.220	majority	4300	northern_europeQC_4500to4001_11	.220	1.000	majority	-
+RISE109_noUDG.SG	northern_europeQC_12	.060	majority	3821	northern_europeQC_4000to3501_12	.040	.666	majority	-

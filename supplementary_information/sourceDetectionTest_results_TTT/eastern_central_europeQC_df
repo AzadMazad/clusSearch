@@ -1,0 +1,51 @@
+Sample	Cluster	Frac. Cluster/Region	Cluster type	Date in years BP	Periodic subcluster	Frac. subcluster/region	Frac. subcluster/cluster	subcluster type	Potential sources for subcluster
+I11843	eastern_central_europeQC_4	.040	pot. outlier	3750	eastern_central_europeQC_4000to3501_4	.020	.500	connected to majority	-
+I0789.SG	eastern_central_europeQC_13	.140	majority	2163	eastern_central_europeQC_2500to2001_13	.060	.428	majority	-
+Kivutkalns19	eastern_central_europeQC_14	.020	pot. outlier	2433	eastern_central_europeQC_2500to2001_14	.020	1.000	outlier	northern_europeQC_3000to2501_7 northern_europeQC_3000to2501_10 northern_europeQC_3000to2501_14 northern_europeQC_3500to3001_7 northern_europeQC_2500to2001_7 northern_europeQC_4500to4001_7 northern_europeQC_4500to4001_9
+S1252	eastern_central_europeQC_1	.040	pot. outlier	3650	eastern_central_europeQC_4000to3501_1	.020	.500	outlier	italy_with_sardiniaQC_4500to4001_8 italy_with_sardiniaQC_4000to3501_8
+ALA030	eastern_central_europeQC_17	.020	pot. outlier	3467	eastern_central_europeQC_3500to3001_17	.020	1.000	outlier	turkeyQC_3500to3001_5 turkeyQC_3500to3001_7 turkeyQC_4500to4001_1 turkeyQC_4000to3501_7 turkeyQC_4500to4001_5 turkeyQC_4000to3501_5 turkeyQC_4000to3501_6
+ALM001_merged	eastern_central_europeQC_2	.020	pot. outlier	3821	eastern_central_europeQC_4000to3501_2	.020	1.000	outlier	southwestern_europeQC_4000to3501_8 southwestern_europeQC_4000to3501_11 southwestern_europeQC_4500to4001_11 southwestern_europeQC_4000to3501_10 southwestern_europeQC_4000to3501_9
+I11629	eastern_central_europeQC_12	.100	majority	3200	eastern_central_europeQC_3500to3001_12	.020	.200	majority	-
+I18213	eastern_central_europeQC_6	.340	majority	2725	eastern_central_europeQC_3000to2501_6	.080	.235	majority	-
+I20751	eastern_central_europeQC_8	.020	pot. outlier	3200	eastern_central_europeQC_3500to3001_8	.020	1.000	connected to majority	-
+I18110	eastern_central_europeQC_6	.340	majority	2200	eastern_central_europeQC_2500to2001_6	.260	.764	majority	-
+I25509	eastern_central_europeQC_13	.140	majority	2131	eastern_central_europeQC_2500to2001_13	.060	.428	majority	-
+I18239	eastern_central_europeQC_6	.340	majority	2725	eastern_central_europeQC_3000to2501_6	.080	.235	majority	-
+I18220	eastern_central_europeQC_6	.340	majority	2312	eastern_central_europeQC_2500to2001_6	.260	.764	majority	-
+I2365	eastern_central_europeQC_13	.140	majority	4299	eastern_central_europeQC_4500to4001_13	.040	.285	majority	-
+I18227	eastern_central_europeQC_6	.340	majority	2525	eastern_central_europeQC_3000to2501_6	.080	.235	majority	-
+I25522	eastern_central_europeQC_6	.340	majority	2150	eastern_central_europeQC_2500to2001_6	.260	.764	majority	-
+I7045	eastern_central_europeQC_3	.020	pot. outlier	4231	eastern_central_europeQC_4500to4001_3	.020	1.000	outlier	-
+I18838	eastern_central_europeQC_6	.340	majority	2210	eastern_central_europeQC_2500to2001_6	.260	.764	majority	-
+I5287	eastern_central_europeQC_12	.100	majority	2525	eastern_central_europeQC_3000to2501_12	.040	.400	majority	-
+IR1_noUDG.SG	eastern_central_europeQC_15	.020	pot. outlier	2849	eastern_central_europeQC_3000to2501_15	.020	1.000	outlier	-
+I25519	eastern_central_europeQC_6	.340	majority	2150	eastern_central_europeQC_2500to2001_6	.260	.764	majority	-
+I5288	eastern_central_europeQC_13	.140	majority	2525	eastern_central_europeQC_3000to2501_13	.040	.285	majority	-
+I18837	eastern_central_europeQC_6	.340	majority	2210	eastern_central_europeQC_2500to2001_6	.260	.764	majority	-
+RISE479_noUDG.SG	eastern_central_europeQC_11	.020	pot. outlier	3700	eastern_central_europeQC_4000to3501_11	.020	1.000	outlier	northern_europeQC_4500to4001_9
+I2787	eastern_central_europeQC_16	.020	pot. outlier	4254	eastern_central_europeQC_4500to4001_16	.020	1.000	outlier	-
+I2741	eastern_central_europeQC_1	.040	pot. outlier	4245	eastern_central_europeQC_4500to4001_1	.020	.500	outlier	italy_with_sardiniaQC_4500to4001_8
+I3528	eastern_central_europeQC_10	.040	pot. outlier	4364	eastern_central_europeQC_4500to4001_10	.020	.500	outlier	western_europeQC_4000to3501_3 southeastern_europeQC_4000to3501_6
+I25507	eastern_central_europeQC_5	.080	majority	2841	eastern_central_europeQC_3000to2501_5	.040	.500	majority	-
+I25510	eastern_central_europeQC_6	.340	majority	2150	eastern_central_europeQC_2500to2001_6	.260	.764	majority	-
+DA198_noUDG.SG	eastern_central_europeQC_5	.080	majority	2441	eastern_central_europeQC_2500to2001_5	.040	.500	majority	-
+I20752	eastern_central_europeQC_13	.140	majority	2256	eastern_central_europeQC_2500to2001_13	.060	.428	majority	-
+I25524	eastern_central_europeQC_12	.100	majority	2218	eastern_central_europeQC_2500to2001_12	.040	.400	majority	-
+I18527	eastern_central_europeQC_6	.340	majority	2200	eastern_central_europeQC_2500to2001_6	.260	.764	majority	-
+I25525	eastern_central_europeQC_12	.100	majority	2550	eastern_central_europeQC_3000to2501_12	.040	.400	majority	-
+I18526	eastern_central_europeQC_6	.340	majority	2200	eastern_central_europeQC_2500to2001_6	.260	.764	majority	-
+SZ1.SG	eastern_central_europeQC_9	.020	pot. outlier	3850	eastern_central_europeQC_4000to3501_9	.020	1.000	outlier	-
+I18241	eastern_central_europeQC_10	.040	pot. outlier	2725	eastern_central_europeQC_3000to2501_10	.020	.500	outlier	-
+I18530	eastern_central_europeQC_6	.340	majority	2230	eastern_central_europeQC_2500to2001_6	.260	.764	majority	-
+DA194_noUDG.SG	eastern_central_europeQC_7	.040	pot. outlier	2328	eastern_central_europeQC_2500to2001_7	.020	.500	connected to majority	-
+I18226	eastern_central_europeQC_12	.100	majority	2295	eastern_central_europeQC_2500to2001_12	.040	.400	majority	-
+I25512	eastern_central_europeQC_5	.080	majority	2150	eastern_central_europeQC_2500to2001_5	.040	.500	majority	-
+I20749	eastern_central_europeQC_7	.040	pot. outlier	3200	eastern_central_europeQC_3500to3001_7	.020	.500	outlier	western_europeQC_4000to3501_3 northern_europeQC_4500to4001_5 southeastern_europeQC_4000to3501_6
+I18839	eastern_central_europeQC_6	.340	majority	2200	eastern_central_europeQC_2500to2001_6	.260	.764	majority	-
+I18489	eastern_central_europeQC_6	.340	majority	2240	eastern_central_europeQC_2500to2001_6	.260	.764	majority	-
+I18488	eastern_central_europeQC_6	.340	majority	2240	eastern_central_europeQC_2500to2001_6	.260	.764	majority	-
+I18211	eastern_central_europeQC_13	.140	majority	2725	eastern_central_europeQC_3000to2501_13	.040	.285	majority	-
+I3529	eastern_central_europeQC_13	.140	majority	4300	eastern_central_europeQC_4500to4001_13	.040	.285	majority	-
+I11722	eastern_central_europeQC_5	.080	majority	2525	eastern_central_europeQC_3000to2501_5	.040	.500	majority	-
+I12099	eastern_central_europeQC_4	.040	pot. outlier	2525	eastern_central_europeQC_3000to2501_4	.020	.500	connected to majority	-
+I25508	eastern_central_europeQC_6	.340	majority	2809	eastern_central_europeQC_3000to2501_6	.080	.235	majority	-

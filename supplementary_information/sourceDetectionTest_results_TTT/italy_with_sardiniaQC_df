@@ -1,0 +1,51 @@
+Sample	Cluster	Frac. Cluster/Region	Cluster type	Date in years BP	Periodic subcluster	Frac. subcluster/region	Frac. subcluster/cluster	subcluster type	Potential sources for subcluster
+I11715	italy_with_sardiniaQC_13	.020	pot. outlier	2046	italy_with_sardiniaQC_2500to2001_13	.020	1.000	outlier	english_islesQC_4500to4001_8 northern_europeQC_2500to2001_13 northern_europeQC_4500to4001_5 northern_europeQC_2500to2001_5 southwestern_europeQC_3500to3001_9 western_europeQC_2500to2001_4 western_europeQC_2500to2001_5 western_europeQC_3000to2501_4 western_europeQC_3000to2501_7 western_europeQC_3000to2501_8 western_europeQC_4000to3501_4 eastern_central_europeQC_3500to3001_8 english_islesQC_3000to2501_6 english_islesQC_2500to2001_6 english_islesQC_3500to3001_6 english_islesQC_4000to3501_7
+Kivutkalns215	italy_with_sardiniaQC_2	.020	pot. outlier	2559	italy_with_sardiniaQC_3000to2501_2	.020	1.000	outlier	northern_europeQC_3000to2501_14 northern_europeQC_3500to3001_7 northern_europeQC_3000to2501_16 northern_europeQC_4500to4001_9 northern_europeQC_3000to2501_7 northern_europeQC_4500to4001_7 northern_europeQC_3500to3001_8
+I11034	italy_with_sardiniaQC_1	.040	pot. outlier	2175	italy_with_sardiniaQC_2500to2001_1	.020	.500	outlier	eastern_central_europeQC_2500to2001_12 eastern_central_europeQC_2500to2001_13 eastern_central_europeQC_3000to2501_12 eastern_central_europeQC_3500to3001_12 eastern_central_europeQC_3000to2501_13 english_islesQC_3500to3001_3 eastern_central_europeQC_2500to2001_7 english_islesQC_4500to4001_8 english_islesQC_3500to3001_5 northern_europeQC_4000to3501_12 northern_europeQC_4500to4001_12 english_islesQC_4000to3501_7 northern_europeQC_3000to2501_16 northern_europeQC_2500to2001_13 northern_europeQC_4500to4001_15 northern_europeQC_4500to4001_13 northern_europeQC_4500to4001_16 northern_europeQC_4000to3501_13 western_europeQC_2500to2001_11 western_europeQC_3000to2501_11 western_europeQC_3000to2501_7 western_europeQC_2500to2001_5 western_europeQC_4000to3501_10 western_europeQC_4500to4001_7 western_europeQC_3000to2501_8
+ALM003	italy_with_sardiniaQC_6	.020	pot. outlier	3825	italy_with_sardiniaQC_4000to3501_6	.020	1.000	outlier	southwestern_europeQC_4000to3501_8 southwestern_europeQC_4500to4001_11 southwestern_europeQC_4000to3501_10 southwestern_europeQC_4000to3501_7 southwestern_europeQC_4000to3501_9 southwestern_europeQC_4000to3501_11
+I13168	italy_with_sardiniaQC_11	.040	pot. outlier	3293	italy_with_sardiniaQC_3500to3001_11	.020	.500	connected to majority	-
+I20224	italy_with_sardiniaQC_14	.040	pot. outlier	2565	italy_with_sardiniaQC_3000to2501_14	.040	1.000	outlier	turkeyQC_3000to2501_1 turkeyQC_4500to4001_1
+I15941	italy_with_sardiniaQC_8	.240	majority	4196	italy_with_sardiniaQC_4500to4001_8	.080	.333	majority	-
+I16170_enhanced	italy_with_sardiniaQC_8	.240	majority	3337	italy_with_sardiniaQC_3500to3001_8	.080	.333	majority	-
+I12082	italy_with_sardiniaQC_1	.040	pot. outlier	3300	italy_with_sardiniaQC_3500to3001_1	.020	.500	outlier	western_europeQC_4500to4001_10 western_europeQC_4000to3501_10 english_islesQC_3500to3001_5 english_islesQC_4000to3501_7 eastern_central_europeQC_3500to3001_12 western_europeQC_4500to4001_7 northern_europeQC_4500to4001_16 northern_europeQC_4500to4001_15 northern_europeQC_4000to3501_16 english_islesQC_3500to3001_3 northern_europeQC_4500to4001_17 northern_europeQC_4000to3501_13 northern_europeQC_4000to3501_12 northern_europeQC_4500to4001_13 northern_europeQC_4500to4001_12
+ISB001	italy_with_sardiniaQC_8	.240	majority	3735	italy_with_sardiniaQC_4000to3501_8	.060	.250	majority	-
+TAQ012	italy_with_sardiniaQC_10	.080	majority	2151	italy_with_sardiniaQC_2500to2001_10	.060	.750	majority	-
+I16161	italy_with_sardiniaQC_8	.240	majority	3434	italy_with_sardiniaQC_3500to3001_8	.080	.333	majority	-
+SEC005	italy_with_sardiniaQC_8	.240	majority	4348	italy_with_sardiniaQC_4500to4001_8	.080	.333	majority	-
+BRC010.SG	italy_with_sardiniaQC_12	.200	majority	3804	italy_with_sardiniaQC_4000to3501_12	.040	.200	majority	-
+SUC009	italy_with_sardiniaQC_8	.240	majority	3667	italy_with_sardiniaQC_4000to3501_8	.060	.250	majority	-
+I13376	italy_with_sardiniaQC_17	.080	majority	2750	italy_with_sardiniaQC_3000to2501_17	.060	.750	majority	-
+I10951	italy_with_sardiniaQC_4	.020	pot. outlier	2540	italy_with_sardiniaQC_3000to2501_4	.020	1.000	outlier	-
+I15940	italy_with_sardiniaQC_3	.020	pot. outlier	4203	italy_with_sardiniaQC_4500to4001_3	.020	1.000	outlier	-
+CSN003	italy_with_sardiniaQC_10	.080	majority	2231	italy_with_sardiniaQC_2500to2001_10	.060	.750	majority	-
+R10340.SG	italy_with_sardiniaQC_12	.200	majority	2328	italy_with_sardiniaQC_2500to2001_12	.100	.500	majority	-
+VET007	italy_with_sardiniaQC_10	.080	majority	2721	italy_with_sardiniaQC_3000to2501_10	.020	.250	majority	-
+R1016.SG	italy_with_sardiniaQC_12	.200	majority	2750	italy_with_sardiniaQC_3000to2501_12	.040	.200	majority	-
+I7221	italy_with_sardiniaQC_14	.040	pot. outlier	2520	italy_with_sardiniaQC_3000to2501_14	.040	1.000	outlier	turkeyQC_3000to2501_1 turkeyQC_4500to4001_1
+I10366	italy_with_sardiniaQC_19	.020	pot. outlier	2244	italy_with_sardiniaQC_2500to2001_19	.020	1.000	outlier	-
+I13387	italy_with_sardiniaQC_15	.060	majority	2750	italy_with_sardiniaQC_3000to2501_15	.040	.666	majority	-
+TAQ010	italy_with_sardiniaQC_12	.200	majority	2151	italy_with_sardiniaQC_2500to2001_12	.100	.500	majority	-
+R1021.SG	italy_with_sardiniaQC_12	.200	majority	2600	italy_with_sardiniaQC_3000to2501_12	.040	.200	majority	-
+I17866	italy_with_sardiniaQC_17	.080	majority	2359	italy_with_sardiniaQC_2500to2001_17	.020	.250	majority	-
+R11105.SG	italy_with_sardiniaQC_12	.200	majority	3610	italy_with_sardiniaQC_4000to3501_12	.040	.200	majority	-
+I13392	italy_with_sardiniaQC_15	.060	majority	2750	italy_with_sardiniaQC_3000to2501_15	.040	.666	majority	-
+LON001	italy_with_sardiniaQC_8	.240	majority	3775	italy_with_sardiniaQC_4000to3501_8	.060	.250	majority	-
+I13394	italy_with_sardiniaQC_16	.020	pot. outlier	2750	italy_with_sardiniaQC_3000to2501_16	.020	1.000	outlier	-
+I13379	italy_with_sardiniaQC_17	.080	majority	2750	italy_with_sardiniaQC_3000to2501_17	.060	.750	majority	-
+I2477	italy_with_sardiniaQC_8	.240	majority	4015	italy_with_sardiniaQC_4500to4001_8	.080	.333	majority	-
+I10365	italy_with_sardiniaQC_9	.020	pot. outlier	3404	italy_with_sardiniaQC_3500to3001_9	.020	1.000	connected to majority	-
+R11835.SG	italy_with_sardiniaQC_8	.240	majority	2738	italy_with_sardiniaQC_3000to2501_8	.020	.083	majority	-
+I3741	italy_with_sardiniaQC_8	.240	majority	3088	italy_with_sardiniaQC_3500to3001_8	.080	.333	majority	-
+R10337.SG	italy_with_sardiniaQC_5	.020	pot. outlier	2028	italy_with_sardiniaQC_2500to2001_5	.020	1.000	outlier	turkeyQC_3500to3001_7
+ORC001	italy_with_sardiniaQC_8	.240	majority	3163	italy_with_sardiniaQC_3500to3001_8	.080	.333	majority	-
+CSN006	italy_with_sardiniaQC_12	.200	majority	2396	italy_with_sardiniaQC_2500to2001_12	.100	.500	majority	-
+I1979	italy_with_sardiniaQC_15	.060	majority	4015	italy_with_sardiniaQC_4500to4001_15	.020	.333	majority	-
+R435.SG	italy_with_sardiniaQC_12	.200	majority	2350	italy_with_sardiniaQC_2500to2001_12	.100	.500	majority	-
+I4109	italy_with_sardiniaQC_18	.020	pot. outlier	3516	italy_with_sardiniaQC_4000to3501_18	.020	1.000	outlier	-
+BRC003.SG	italy_with_sardiniaQC_12	.200	majority	3447	italy_with_sardiniaQC_3500to3001_12	.020	.100	majority	-
+I10948	italy_with_sardiniaQC_17	.080	majority	2540	italy_with_sardiniaQC_3000to2501_17	.060	.750	majority	-
+I11443	italy_with_sardiniaQC_11	.040	pot. outlier	4090	italy_with_sardiniaQC_4500to4001_11	.020	.500	connected to majority	-
+SUC007	italy_with_sardiniaQC_7	.020	pot. outlier	4321	italy_with_sardiniaQC_4500to4001_7	.020	1.000	outlier	southwestern_europeQC_4000to3501_7
+R27.SG	italy_with_sardiniaQC_8	.240	majority	4150	italy_with_sardiniaQC_4500to4001_8	.080	.333	majority	-
+TAQ024	italy_with_sardiniaQC_10	.080	majority	2167	italy_with_sardiniaQC_2500to2001_10	.060	.750	majority	-
+ORD009.SG	italy_with_sardiniaQC_12	.200	majority	2497	italy_with_sardiniaQC_2500to2001_12	.100	.500	majority	-

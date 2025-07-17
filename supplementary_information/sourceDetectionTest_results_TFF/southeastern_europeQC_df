@@ -1,0 +1,51 @@
+Sample	Cluster	Frac. Cluster/Region	Cluster type	Date in years BP	Periodic subcluster	Frac. subcluster/region	Frac. subcluster/cluster	subcluster type	Potential sources for subcluster
+I11717	southeastern_europeQC_14	.020	pot. outlier	2525	southeastern_europeQC_3000to2501_14	.020	1.000	outlier	southwestern_europeQC_3500to3001_7 western_europeQC_4000to3501_13 eastern_central_europeQC_3000to2501_22
+I11143	southeastern_europeQC_18	.040	pot. outlier	2145	southeastern_europeQC_2500to2001_18	.020	.500	outlier	english_islesQC_2500to2001_8 english_islesQC_3000to2501_6 english_islesQC_3000to2501_8 english_islesQC_4000to3501_9 southwestern_europeQC_2500to2001_8 western_europeQC_2500to2001_23 western_europeQC_2500to2001_11 western_europeQC_4500to4001_17 western_europeQC_4500to4001_11 eastern_central_europeQC_3000to2501_22 eastern_central_europeQC_4500to4001_22 english_islesQC_2500to2001_10 eastern_central_europeQC_3000to2501_23
+I20228	southeastern_europeQC_22	.020	pot. outlier	2565	southeastern_europeQC_3000to2501_22	.020	1.000	outlier	turkeyQC_3000to2501_27 turkeyQC_3000to2501_26 turkeyQC_4500to4001_19
+Kivutkalns25	southeastern_europeQC_7	.020	pot. outlier	2637	southeastern_europeQC_3000to2501_7	.020	1.000	outlier	northern_europeQC_3000to2501_23
+ALM007	southeastern_europeQC_9	.020	pot. outlier	3825	southeastern_europeQC_4000to3501_9	.020	1.000	outlier	southwestern_europeQC_4000to3501_7 southwestern_europeQC_4500to4001_16
+I14675	southeastern_europeQC_10	.020	pot. outlier	4021	southeastern_europeQC_4500to4001_10	.020	1.000	outlier	italy_with_sardiniaQC_4500to4001_13 italy_with_sardiniaQC_4500to4001_12
+I13028	southeastern_europeQC_5	.020	pot. outlier	4250	southeastern_europeQC_4500to4001_5	.020	1.000	outlier	western_europeQC_4500to4001_17
+I14501	southeastern_europeQC_17	.020	pot. outlier	3175	southeastern_europeQC_3500to3001_17	.020	1.000	outlier	-
+I13778	southeastern_europeQC_19	.220	majority	3234	southeastern_europeQC_3500to3001_19	.040	.181	majority	-
+I16814	southeastern_europeQC_19	.220	majority	2903	southeastern_europeQC_3000to2501_19	.100	.454	majority	-
+I23205	southeastern_europeQC_19	.220	majority	3900	southeastern_europeQC_4000to3501_19	.080	.363	majority	-
+MOK17A.SG	southeastern_europeQC_3	.020	pot. outlier	3900	southeastern_europeQC_4000to3501_3	.020	1.000	outlier	italy_with_sardiniaQC_4000to3501_5
+MOK28A.SG	southeastern_europeQC_1	.080	majority	3900	southeastern_europeQC_4000to3501_1	.080	1.000	majority	-
+MOK31.SG	southeastern_europeQC_2	.120	majority	3900	southeastern_europeQC_4000to3501_2	.120	1.000	majority	-
+I16803	southeastern_europeQC_19	.220	majority	3894	southeastern_europeQC_4000to3501_19	.080	.363	majority	-
+I23206	southeastern_europeQC_19	.220	majority	3900	southeastern_europeQC_4000to3501_19	.080	.363	majority	-
+I18078	southeastern_europeQC_12	.100	majority	3450	southeastern_europeQC_3500to3001_12	.020	.200	majority	-
+I5074	southeastern_europeQC_15	.020	pot. outlier	3385	southeastern_europeQC_3500to3001_15	.020	1.000	outlier	-
+MOK14.SG	southeastern_europeQC_2	.120	majority	3900	southeastern_europeQC_4000to3501_2	.120	1.000	majority	-
+JAG82_noUDG.SG	southeastern_europeQC_1	.080	majority	3650	southeastern_europeQC_4000to3501_1	.080	1.000	majority	-
+I5243	southeastern_europeQC_8	.020	pot. outlier	4306	southeastern_europeQC_4500to4001_8	.020	1.000	outlier	-
+I18831	southeastern_europeQC_13	.100	majority	2201	southeastern_europeQC_2500to2001_13	.020	.200	majority	-
+I24882	southeastern_europeQC_19	.220	majority	2599	southeastern_europeQC_3000to2501_19	.100	.454	majority	-
+MOK10B.SG	southeastern_europeQC_2	.120	majority	3900	southeastern_europeQC_4000to3501_2	.120	1.000	majority	-
+I5728	southeastern_europeQC_12	.100	majority	2224	southeastern_europeQC_2500to2001_12	.040	.400	majority	-
+I18752	southeastern_europeQC_13	.100	majority	3750	southeastern_europeQC_4000to3501_13	.060	.600	majority	-
+I18416	southeastern_europeQC_20	.020	pot. outlier	3100	southeastern_europeQC_3500to3001_20	.020	1.000	connected to majority	-
+MOK16A.SG	southeastern_europeQC_1	.080	majority	3900	southeastern_europeQC_4000to3501_1	.080	1.000	majority	-
+I5725	southeastern_europeQC_12	.100	majority	2554	southeastern_europeQC_3000to2501_12	.040	.400	majority	-
+I14498	southeastern_europeQC_19	.220	majority	3100	southeastern_europeQC_3500to3001_19	.040	.181	majority	-
+I2163	southeastern_europeQC_6	.020	pot. outlier	3639	southeastern_europeQC_4000to3501_6	.020	1.000	outlier	-
+I18738	southeastern_europeQC_13	.100	majority	3100	southeastern_europeQC_3500to3001_13	.020	.200	majority	-
+I5687	southeastern_europeQC_4	.020	pot. outlier	2575	southeastern_europeQC_3000to2501_4	.020	1.000	outlier	-
+I18734	southeastern_europeQC_11	.040	pot. outlier	3100	southeastern_europeQC_3500to3001_11	.040	1.000	outlier	-
+MOK27.SG	southeastern_europeQC_2	.120	majority	3900	southeastern_europeQC_4000to3501_2	.120	1.000	majority	-
+I19027	southeastern_europeQC_19	.220	majority	3750	southeastern_europeQC_4000to3501_19	.080	.363	majority	-
+I18746	southeastern_europeQC_13	.100	majority	3750	southeastern_europeQC_4000to3501_13	.060	.600	majority	-
+I24879	southeastern_europeQC_19	.220	majority	2599	southeastern_europeQC_3000to2501_19	.100	.454	majority	-
+I18415	southeastern_europeQC_21	.020	pot. outlier	3100	southeastern_europeQC_3500to3001_21	.020	1.000	connected to majority	-
+MOK25A.SG	southeastern_europeQC_2	.120	majority	3900	southeastern_europeQC_4000to3501_2	.120	1.000	majority	-
+MOK26A.SG	southeastern_europeQC_2	.120	majority	3900	southeastern_europeQC_4000to3501_2	.120	1.000	majority	-
+I5729	southeastern_europeQC_12	.100	majority	2920	southeastern_europeQC_3000to2501_12	.040	.400	majority	-
+I24638	southeastern_europeQC_19	.220	majority	2658	southeastern_europeQC_3000to2501_19	.100	.454	majority	-
+I22938	southeastern_europeQC_16	.020	pot. outlier	2425	southeastern_europeQC_2500to2001_16	.020	1.000	outlier	english_islesQC_3000to2501_6 english_islesQC_3500to3001_6
+I18723	southeastern_europeQC_11	.040	pot. outlier	3100	southeastern_europeQC_3500to3001_11	.040	1.000	outlier	-
+I13170	southeastern_europeQC_18	.040	pot. outlier	2550	southeastern_europeQC_3000to2501_18	.020	.500	outlier	eastern_central_europeQC_4500to4001_22 eastern_central_europeQC_3000to2501_22 eastern_central_europeQC_4500to4001_23 eastern_central_europeQC_3000to2501_23 english_islesQC_3500to3001_6 english_islesQC_3000to2501_6 english_islesQC_3000to2501_8
+I18712	southeastern_europeQC_13	.100	majority	3600	southeastern_europeQC_4000to3501_13	.060	.600	majority	-
+I23995	southeastern_europeQC_19	.220	majority	2729	southeastern_europeQC_3000to2501_19	.100	.454	majority	-
+I5724	southeastern_europeQC_12	.100	majority	2232	southeastern_europeQC_2500to2001_12	.040	.400	majority	-
+JAG34_noUDG.SG	southeastern_europeQC_1	.080	majority	3715	southeastern_europeQC_4000to3501_1	.080	1.000	majority	-

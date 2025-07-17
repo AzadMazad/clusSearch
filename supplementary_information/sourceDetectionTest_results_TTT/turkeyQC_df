@@ -1,0 +1,51 @@
+Sample	Cluster	Frac. Cluster/Region	Cluster type	Date in years BP	Periodic subcluster	Frac. subcluster/region	Frac. subcluster/cluster	subcluster type	Potential sources for subcluster
+I13470	turkeyQC_16	.020	pot. outlier	3943	turkeyQC_4000to3501_16	.020	1.000	outlier	western_europeQC_4000to3501_10 eastern_central_europeQC_4500to4001_13 western_europeQC_4000to3501_11 western_europeQC_4000to3501_5 western_europeQC_4500to4001_11 english_islesQC_4000to3501_7 english_islesQC_4500to4001_4 northern_europeQC_4500to4001_15 northern_europeQC_4500to4001_13 northern_europeQC_4500to4001_17
+I13775	turkeyQC_18	.020	pot. outlier	3300	turkeyQC_3500to3001_18	.020	1.000	outlier	italy_with_sardiniaQC_4500to4001_11 italy_with_sardiniaQC_3500to3001_11 southeastern_europeQC_4000to3501_10 western_europeQC_4000to3501_4 eastern_central_europeQC_4000to3501_4
+I14678	turkeyQC_14	.020	pot. outlier	4247	turkeyQC_4500to4001_14	.020	1.000	outlier	italy_with_sardiniaQC_4500to4001_8
+Spiginas2	turkeyQC_20	.020	pot. outlier	3880	turkeyQC_4000to3501_20	.020	1.000	outlier	northern_europeQC_4500to4001_9 northern_europeQC_4500to4001_7
+I11147	turkeyQC_17	.020	pot. outlier	2241	turkeyQC_2500to2001_17	.020	1.000	outlier	northern_europeQC_4500to4001_5 northern_europeQC_4500to4001_13 northern_europeQC_2500to2001_13 northern_europeQC_4000to3501_13 western_europeQC_2500to2001_3 western_europeQC_2500to2001_11 western_europeQC_2500to2001_4 western_europeQC_2500to2001_5 western_europeQC_3000to2501_11 western_europeQC_3000to2501_8 western_europeQC_3000to2501_7 western_europeQC_4500to4001_7 western_europeQC_4000to3501_5 eastern_central_europeQC_2500to2001_7 english_islesQC_3000to2501_6 eastern_central_europeQC_3000to2501_12 eastern_central_europeQC_4500to4001_13 english_islesQC_4000to3501_7 eastern_central_europeQC_3500to3001_12 english_islesQC_2500to2001_7 eastern_central_europeQC_2500to2001_13 eastern_central_europeQC_3000to2501_13 english_islesQC_4500to4001_8 english_islesQC_3500to3001_3 english_islesQC_3500to3001_6 english_islesQC_3000to2501_7 english_islesQC_2500to2001_6
+I12110	turkeyQC_19	.020	pot. outlier	2525	turkeyQC_3000to2501_19	.020	1.000	outlier	english_islesQC_3000to2501_6 italy_with_sardiniaQC_4500to4001_11 english_islesQC_3500to3001_6 eastern_central_europeQC_3500to3001_8 northern_europeQC_4500to4001_5 southwestern_europeQC_3500to3001_9
+ALM015_merged	turkeyQC_15	.020	pot. outlier	3773	turkeyQC_4000to3501_15	.020	1.000	outlier	southwestern_europeQC_4000to3501_11 southwestern_europeQC_4000to3501_10 southwestern_europeQC_4000to3501_7 southwestern_europeQC_4000to3501_8 southwestern_europeQC_4000to3501_9 southwestern_europeQC_4500to4001_11
+I20232	turkeyQC_1	.200	majority	2565	turkeyQC_3000to2501_1	.100	.500	majority	-
+I20258	turkeyQC_1	.200	majority	2565	turkeyQC_3000to2501_1	.100	.500	majority	-
+I20233	turkeyQC_1	.200	majority	2565	turkeyQC_3000to2501_1	.100	.500	majority	-
+I2683_noUDG	turkeyQC_1	.200	majority	4479	turkeyQC_4500to4001_1	.040	.200	majority	-
+I20257	turkeyQC_1	.200	majority	2565	turkeyQC_3000to2501_1	.100	.500	majority	-
+I3303	turkeyQC_9	.020	pot. outlier	2217	turkeyQC_2500to2001_9	.020	1.000	outlier	-
+MA2200_noUDG.SG	turkeyQC_3	.040	pot. outlier	3575	turkeyQC_4000to3501_3	.040	1.000	outlier	-
+ALA020	turkeyQC_5	.100	majority	3395	turkeyQC_3500to3001_5	.040	.400	majority	-
+ALA017	turkeyQC_8	.020	pot. outlier	3478	turkeyQC_3500to3001_8	.020	1.000	connected to majority	-
+I14762	turkeyQC_5	.100	majority	3583	turkeyQC_4000to3501_5	.040	.400	majority	-
+I2495_noUDG	turkeyQC_1	.200	majority	4355	turkeyQC_4500to4001_1	.040	.200	majority	-
+ALA039	turkeyQC_5	.100	majority	3337	turkeyQC_3500to3001_5	.040	.400	majority	-
+MA2198_noUDG.SG	turkeyQC_13	.020	pot. outlier	2133	turkeyQC_2500to2001_13	.020	1.000	outlier	-
+ALA131_noUDG	turkeyQC_7	.300	majority	3550	turkeyQC_4000to3501_7	.260	.866	majority	-
+ART001	turkeyQC_6	.060	majority	4342	turkeyQC_4500to4001_6	.040	.666	majority	-
+ALA035	turkeyQC_7	.300	majority	3820	turkeyQC_4000to3501_7	.260	.866	majority	-
+ALA123	turkeyQC_7	.300	majority	3550	turkeyQC_4000to3501_7	.260	.866	majority	-
+I6573	turkeyQC_1	.200	majority	2127	turkeyQC_2500to2001_1	.060	.300	majority	-
+I3310	turkeyQC_4	.020	pot. outlier	2127	turkeyQC_2500to2001_4	.020	1.000	outlier	-
+I20231	turkeyQC_2	.020	pot. outlier	2565	turkeyQC_3000to2501_2	.020	1.000	outlier	-
+ALA028	turkeyQC_7	.300	majority	3705	turkeyQC_4000to3501_7	.260	.866	majority	-
+ALA029	turkeyQC_7	.300	majority	3743	turkeyQC_4000to3501_7	.260	.866	majority	-
+I4473	turkeyQC_11	.020	pot. outlier	2127	turkeyQC_2500to2001_11	.020	1.000	outlier	-
+ALA016	turkeyQC_7	.300	majority	3503	turkeyQC_4000to3501_7	.260	.866	majority	-
+I4472	turkeyQC_1	.200	majority	2127	turkeyQC_2500to2001_1	.060	.300	majority	-
+I6574	turkeyQC_1	.200	majority	2127	turkeyQC_2500to2001_1	.060	.300	majority	-
+ALA136_noUDG	turkeyQC_7	.300	majority	3550	turkeyQC_4000to3501_7	.260	.866	majority	-
+ALA138_noUDG	turkeyQC_7	.300	majority	3550	turkeyQC_4000to3501_7	.260	.866	majority	-
+I3917_noUDG	turkeyQC_1	.200	majority	2596	turkeyQC_3000to2501_1	.100	.500	majority	-
+ALA008	turkeyQC_7	.300	majority	3752	turkeyQC_4000to3501_7	.260	.866	majority	-
+ALA026	turkeyQC_7	.300	majority	3627	turkeyQC_4000to3501_7	.260	.866	majority	-
+I5737	turkeyQC_10	.020	pot. outlier	3931	turkeyQC_4000to3501_10	.020	1.000	outlier	-
+ALA118	turkeyQC_7	.300	majority	3550	turkeyQC_4000to3501_7	.260	.866	majority	-
+ALA095	turkeyQC_5	.100	majority	3780	turkeyQC_4000to3501_5	.040	.400	majority	-
+MA2206_noUDG.SG	turkeyQC_3	.040	pot. outlier	3825	turkeyQC_4000to3501_3	.040	1.000	outlier	-
+I14797	turkeyQC_7	.300	majority	4450	turkeyQC_4500to4001_7	.020	.066	majority	-
+ALA025	turkeyQC_6	.060	majority	3711	turkeyQC_4000to3501_6	.020	.333	majority	-
+I14792	turkeyQC_6	.060	majority	4247	turkeyQC_4500to4001_6	.040	.666	majority	-
+ALA002	turkeyQC_7	.300	majority	3388	turkeyQC_3500to3001_7	.020	.066	majority	-
+I19613	turkeyQC_12	.020	pot. outlier	2750	turkeyQC_3000to2501_12	.020	1.000	outlier	-
+ALA130_noUDG	turkeyQC_7	.300	majority	3550	turkeyQC_4000to3501_7	.260	.866	majority	-
+ALA015	turkeyQC_7	.300	majority	3861	turkeyQC_4000to3501_7	.260	.866	majority	-
+I14788	turkeyQC_5	.100	majority	4450	turkeyQC_4500to4001_5	.020	.200	majority	-

@@ -1,0 +1,51 @@
+Sample	Cluster	Frac. Cluster/Region	Cluster type	Date in years BP	Periodic subcluster	Frac. subcluster/region	Frac. subcluster/cluster	subcluster type	Potential sources for subcluster
+I11712	western_europeQC_5	.220	majority	2011	western_europeQC_2500to2001_5	.040	.181	majority	-
+I1381	western_europeQC_11	.220	majority	4250	western_europeQC_4500to4001_11	.080	.363	majority	-
+I20230	western_europeQC_15	.020	pot. outlier	2565	western_europeQC_3000to2501_15	.020	1.000	outlier	turkeyQC_3000to2501_1 turkeyQC_4500to4001_1
+Kivutkalns222	western_europeQC_12	.020	pot. outlier	2473	western_europeQC_2500to2001_12	.020	1.000	outlier	eastern_central_europeQC_3500to3001_12 northern_europeQC_3000to2501_14 northern_europeQC_3500to3001_7 northern_europeQC_2500to2001_7 northern_europeQC_3500to3001_8 northern_europeQC_3000to2501_7 northern_europeQC_3000to2501_16 northern_europeQC_4500to4001_7 northern_europeQC_4500to4001_9
+I11033	western_europeQC_11	.220	majority	2421	western_europeQC_2500to2001_11	.020	.090	majority	-
+ALM008	western_europeQC_1	.020	pot. outlier	3825	western_europeQC_4000to3501_1	.020	1.000	outlier	southwestern_europeQC_4000to3501_9 southwestern_europeQC_4000to3501_11 southwestern_europeQC_4500to4001_11 southwestern_europeQC_4000to3501_7 southwestern_europeQC_4000to3501_10
+I10552	western_europeQC_2	.020	pot. outlier	3234	western_europeQC_3500to3001_2	.020	1.000	outlier	italy_with_sardiniaQC_3500to3001_8 italy_with_sardiniaQC_4500to4001_8 italy_with_sardiniaQC_4000to3501_8
+I13171	western_europeQC_14	.020	pot. outlier	3175	western_europeQC_3500to3001_14	.020	1.000	outlier	southeastern_europeQC_3500to3001_11 eastern_central_europeQC_4000to3501_4 italy_with_sardiniaQC_3500to3001_11
+PRU002	western_europeQC_9	.040	pot. outlier	4470	western_europeQC_4500to4001_9	.040	1.000	outlier	northern_europeQC_4500to4001_17 northern_europeQC_4500to4001_11
+BNL004	western_europeQC_11	.220	majority	3995	western_europeQC_4000to3501_11	.100	.454	majority	-
+I4885	western_europeQC_4	.120	majority	4170	western_europeQC_4500to4001_4	.040	.333	majority	-
+I20522	western_europeQC_4	.120	majority	2230	western_europeQC_2500to2001_4	.040	.333	majority	-
+I7289	western_europeQC_5	.220	majority	4289	western_europeQC_4500to4001_5	.120	.545	majority	-
+BNL002	western_europeQC_10	.040	pot. outlier	3995	western_europeQC_4000to3501_10	.020	.500	connected to majority	-
+BNL005	western_europeQC_11	.220	majority	4084	western_europeQC_4500to4001_11	.080	.363	majority	-
+BNL003	western_europeQC_11	.220	majority	3995	western_europeQC_4000to3501_11	.100	.454	majority	-
+I11159	western_europeQC_10	.040	pot. outlier	4100	western_europeQC_4500to4001_10	.020	.500	connected to majority	-
+Franconian Sample	-	-	-	-	-	-	-	-	-
+I4068	western_europeQC_11	.220	majority	3985	western_europeQC_4000to3501_11	.100	.454	majority	-
+TORTF.SG	western_europeQC_3	.160	majority	3861	western_europeQC_4000to3501_3	.020	.125	majority	-
+I13791	western_europeQC_11	.220	majority	2975	western_europeQC_3000to2501_11	.020	.090	majority	-
+CLR31	western_europeQC_3	.160	majority	2300	western_europeQC_2500to2001_3	.080	.500	majority	-
+I7202	western_europeQC_11	.220	majority	4250	western_europeQC_4500to4001_11	.080	.363	majority	-
+I7286	western_europeQC_6	.020	pot. outlier	4221	western_europeQC_4500to4001_6	.020	1.000	outlier	northern_europeQC_4500to4001_9 northern_europeQC_4500to4001_13
+I4136	western_europeQC_7	.040	pot. outlier	4250	western_europeQC_4500to4001_7	.020	.500	connected to majority	-
+OTTM_142_noUDG	western_europeQC_5	.220	majority	3527	western_europeQC_4000to3501_5	.060	.272	majority	-
+I7287	western_europeQC_11	.220	majority	4200	western_europeQC_4500to4001_11	.080	.363	majority	-
+CLR23	western_europeQC_4	.120	majority	2300	western_europeQC_2500to2001_4	.040	.333	majority	-
+I7276	western_europeQC_5	.220	majority	4200	western_europeQC_4500to4001_5	.120	.545	majority	-
+I7953	western_europeQC_5	.220	majority	2239	western_europeQC_2500to2001_5	.040	.181	majority	-
+I15642	western_europeQC_5	.220	majority	3950	western_europeQC_4000to3501_5	.060	.272	majority	-
+Franconian Sample	-	-	-	-	-	-	-	-	-
+Franconian Sample	-	-	-	-	-	-	-	-	-
+MX288	western_europeQC_5	.220	majority	4051	western_europeQC_4500to4001_5	.120	.545	majority	-
+I15644	western_europeQC_11	.220	majority	3950	western_europeQC_4000to3501_11	.100	.454	majority	-
+COL239	western_europeQC_7	.040	pot. outlier	2515	western_europeQC_3000to2501_7	.020	.500	connected to majority	-
+I6624	western_europeQC_5	.220	majority	4200	western_europeQC_4500to4001_5	.120	.545	majority	-
+I16326	western_europeQC_8	.020	pot. outlier	2625	western_europeQC_3000to2501_8	.020	1.000	connected to majority	-
+I14189	western_europeQC_11	.220	majority	3850	western_europeQC_4000to3501_11	.100	.454	majority	-
+Franconian Sample	-	-	-	-	-	-	-	-	-
+Franconian Sample	-	-	-	-	-	-	-	-	-
+AITI_43	western_europeQC_4	.120	majority	3760	western_europeQC_4000to3501_4	.020	.166	majority	-
+Franconian Sample	-	-	-	-	-	-	-	-	-
+WEHR_1586	western_europeQC_5	.220	majority	3835	western_europeQC_4000to3501_5	.060	.272	majority	-
+CLR44	western_europeQC_3	.160	majority	2300	western_europeQC_2500to2001_3	.080	.500	majority	-
+POST_44	western_europeQC_4	.120	majority	4023	western_europeQC_4500to4001_4	.040	.333	majority	-
+TIS002	western_europeQC_9	.040	pot. outlier	4470	western_europeQC_4500to4001_9	.040	1.000	outlier	northern_europeQC_4500to4001_17 northern_europeQC_4500to4001_11
+I4946	western_europeQC_5	.220	majority	4188	western_europeQC_4500to4001_5	.120	.545	majority	-
+I3874	western_europeQC_5	.220	majority	4065	western_europeQC_4500to4001_5	.120	.545	majority	-
+UNTA58_68Sk2	western_europeQC_13	.020	pot. outlier	4347	western_europeQC_4500to4001_13	.020	1.000	outlier	northern_europeQC_4500to4001_11
